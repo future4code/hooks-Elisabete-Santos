@@ -1,0 +1,3 @@
+## 🚀 Meu aprendizado semanal
+
+Bom, essa semana foi intensa, desafiadora mas muito boa. Já conhecia o assunto mas sempre tem algo para aprender. Aprendi alguns comando para trabalhar pelo terminal como: ls, cd, mkdir, touch, pd, grep, cat e etc. Na aula de **git** e **GitHub** aprendir bastante, principalmente as diferenças sobre eles. Foi muito fácil entender como versiomar um projeto atravez do git para o GitHub.
