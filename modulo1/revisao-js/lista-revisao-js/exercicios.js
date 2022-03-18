@@ -102,7 +102,12 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
+   let arrayNum = []
+   array.sort((a, b) => a - b);
+   arrayNum.push(array[array.length - 2]);
+   arrayNum.push(array[1]);
 
+   return arrayNum;
 }
 
 // EXERCÍCIO 11
