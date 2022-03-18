@@ -113,6 +113,8 @@ function retornaSegundoMaiorESegundoMenor(array) {
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
 
+   let obj = { ...pessoa, nome: "ANÔNIMO" }
+   return obj;
 }
 
 // EXERCÍCIO 12
