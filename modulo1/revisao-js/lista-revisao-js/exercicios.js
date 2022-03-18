@@ -20,7 +20,19 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
+   let numPares = array.filter(pares => (pares % 2) === 0)
+   return numPares;
+}
 
+// *********** EXERCÍCIO 04 DESAFIO SEM USAR O FILTER ********
+function retornaNumerosPares(array) {
+   let numPares = [];
+   for (let item of array) {
+      if (item % 2 === 0) {
+         numPares.push(item)
+      }
+   }
+   return numPares;
 }
 
 // EXERCÍCIO 05
