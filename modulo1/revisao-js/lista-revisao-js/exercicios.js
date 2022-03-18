@@ -88,7 +88,16 @@ function retornaNPrimeirosPares(n) {
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
+   let qualificarTringulo = '';
+   if (ladoA === ladoB && ladoA === ladoC) {
+      qualificarTringulo = 'Equilátero'
+   } else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+      qualificarTringulo = 'Isósceles'
+   } else if (ladoA != ladoB && ladoB != ladoC && ladoC != ladoA) {
+      qualificarTringulo = 'Escaleno'
+   }
 
+   return qualificarTringulo;
 }
 
 // EXERCÍCIO 10
