@@ -54,6 +54,7 @@ a {
 
 .container-principal {
   background: url("./img/img_desktop.jpg");
+  opacity: 0.8;
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
