@@ -1,0 +1,263 @@
+body {
+  background-color: bisque;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 104px;
+  height: 48px;
+  margin-left: 88px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 0 16px;
+  padding: 16px 26px 0px;
+  margin-left: 85px;
+  cursor: pointer;
+}
+
+li:after {
+  display: block;
+  content: "";
+  border-bottom: solid 4px rgb(102, 42, 16);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transition: 0.65s;
+}
+
+li:hover:after {
+  transform: scaleX(1);
+}
+
+a {
+  font-size: 20px;
+  text-decoration-line: none;
+  color: rgb(31, 30, 30);
+}
+
+.home {
+  height: 40px;
+  background-color: rgb(236, 158, 122);
+  color: #000000;
+}
+
+.container-principal {
+  background: url("./img/img_desktop.jpg");
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  border-radius: 30px;
+  max-width: 1290px;
+  height: 350px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.text-header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding-top: 100px;
+  right: -35px;
+  font-size: 50px;
+  color: white;
+}
+
+.primary {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 10px;
+  right: -33px;
+  font-size: 30px;
+  color: white;
+}
+
+.title-one {
+  display: flex;
+  font-size: 28px;
+  position: relative;
+  justify-content: center;
+  margin-top: 100px;
+  left: 0;
+  bottom: 2em;
+}
+
+.description {
+  display: flex;
+  font-size: 28px;
+  position: relative;
+  justify-content: center;
+  margin-top: 50px;
+  left: 0;
+  bottom: 2em;
+  text-align: center;
+}
+
+.redes-sociais {
+  display: flex;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  justify-content: center;
+  margin-top: 50px;
+  left: 0;
+  bottom: 0.5em;
+  text-align: center;
+}
+
+.img-div {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 10px;
+  left: 0;
+  bottom: 0.5em;
+  text-align: center;
+}
+
+.img-redes-sociais {
+  position: relative;
+  border-radius: 20px;
+  -webkit-box-shadow: -3px 5px 5px -3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+  margin: 8px;
+  width: 60px;
+  height: 60px;
+}
+
+.container {
+  position: relative;
+  max-height: 100px;
+  width: 100%;
+  padding: 12px;
+  position: relative;
+  margin: 200px 10px 0px;
+  align-items: center;
+  right: 35px;
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 15px;
+  color: rgb(31, 30, 30);
+}
+
+h1 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 50px;
+  right: -35px;
+  font-size: 40px;
+}
+
+.cadatrar-produtos {
+  display: flex;
+  justify-content: center;
+  flex-direction: center;
+  border: 1px solid rgb(236, 158, 122);
+  margin: auto;
+  position: relative;
+  top: 50px;
+  text-align: center;
+  background-color: rgb(236, 158, 122);
+  border-radius: 40px;
+  right: auto;
+  left: 40px;
+  width: 450px;
+  height: 580px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.45);
+}
+
+.two {
+  display: flex;
+  font-size: 30px;
+  position: relative;
+  justify-content: center;
+  margin-top: 100px;
+  left: 3%;
+  bottom: 2em;
+}
+
+.four {
+  display: flex;
+  font-size: 30px;
+  position: relative;
+  justify-content: center;
+  margin-top: 100px;
+  left: 3%;
+  bottom: 2em;
+}
+
+h2 {
+  display: flex;
+  font-size: 30px;
+  position: relative;
+  justify-content: center;
+  margin-top: 100px;
+  left: 40%;
+  bottom: 2em;
+}
+
+form {
+  position: relative;
+  top: 150px;
+  right: 22%;
+  line-height: 35px;
+}
+
+.label-text {
+  font-size: 22px;
+  font-weight: 300;
+  position: relative;
+  right: 76px;
+}
+
+.label-text-one {
+  font-size: 22px;
+  font-weight: 300;
+  position: relative;
+  right: 42px;
+}
+.input-field {
+  border: 1px solid rgb(236, 158, 122);
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  left: 35px;
+  width: 350px;
+  height: 35px;
+}
+
+button {
+  background: rgb(150, 50, 4);
+  position: relative;
+  top: 1em;
+  left: 40px;
+  font-weight: 750;
+  font-size: 24px;
+  color: black;
+  height: 60px;
+  width: 200px;
+  border-radius: 30px;
+}
+
+button:hover {
+  transition: 0.65s;
+  background-color: rgb(102, 42, 16);
+}
