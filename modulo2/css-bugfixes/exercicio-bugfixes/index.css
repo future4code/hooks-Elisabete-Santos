@@ -110,6 +110,7 @@ table {
   width: 60%;
   display: relative;
   margin: 0 auto;
+  text-align: center;
 }
 
 td button {
@@ -126,10 +127,6 @@ button:hover {
 
 button:active {
   color: white;
-}
-
-td {
-  text-align: center;
 }
 
 td > img {
