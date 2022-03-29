@@ -24,6 +24,7 @@ input {
   border-left: 0px;
   border-right: 0px;
   border-top: 0px;
+  outline: 0;
 }
 
 .button:focus {
