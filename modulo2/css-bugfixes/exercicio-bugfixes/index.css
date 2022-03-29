@@ -36,7 +36,8 @@ div > p:first-child {
 }
 
 div img {
-  background: black;
+  width: 25px;
+  height: 25px;
 }
 
 div > a {
