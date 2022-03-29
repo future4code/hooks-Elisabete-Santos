@@ -5,35 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Estante de Histórias</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h1>Bem-vind@ a <em> Estante de Histórias</em> !</h1>
-        <p>Onde você pode viaja sem sair de casa, é só comprar um livro!!! </p>
+    <header>
+        <nav class="header">
+            <img src="./img/logo.png" alt="livros" />
+            <ul>
+                <li class="home"><a href="index.html">Página Inicial</a></li>
+                <li><a href="ctrl-estoque.html" >Controle de Estoque</a></li>
+                <li><a href="add-produto.html">Adicionar Produto</a></li>
+                <li><a href="funcionarios.html">Funcionários</a></li>
+            </ul>
+       </nav>
+    </header>
+
+    <div class="container-principal">
+            <h1 class="text-header">Bem-vind@ a <em>Estante de Histórias</em> !</h1>
+            <p class="primary">Onde você pode viaja sem sair de casa, é só comprar um livro!!! </p>
+    </div>
+
+
+    <div class="secundary">
+       <h3 class="title-one">Quer mais cultura no seu dia a dia?</h3>
+       <p class="description">Aqui você encontra! <br> Não perca a chance de levar os seus autores favoritos.</p>
+       <h3 class="title-one">Aqui a história é garantida.</h3>
+       <p class="description">Fique por dentro dos lançamentos, dicas de livros e seleções especiais com desconto. <br> Encontre os melhores livros, os mais vendidos e com histórias inesquecíveis.</p>
     </div>
 
     <div>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html" >Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
-    </div>
+        <p class="redes-sociais">Siga-nos nas redes sociais!</p>
 
-    <div>
-       <h3>Quer mais cultura no seu dia a dia?</h3>
-       <p>Aqui você encontra! <br> Não perca a chance de levar os seus autores favoritos.</p>
-       <h3>Aqui a história é garantida.</h3>
-       <p>Fique por dentro dos lançamentos, dicas de livros e seleções especiais com desconto. Encontre os melhores livros, os mais vendidos e com histórias inesquecíveis.</p>
-    </div>
-
-    <div>
-        <p>Siga-nos nas redes sociais!</p>
-
-        <div>
-            <img src="https://image.flaticon.com/icons/png/512/25/25305.png"/>
-            <img src="https://image.flaticon.com/icons/png/512/25/25425.png"/>
-            <img src="https://image.flaticon.com/icons/png/512/8/8800.png"/>
+        <div class="img-div">
+            <img class="img-redes-sociais" src="./img/facebook.svg" alt="Icone Facebook" />
+            <img class="img-redes-sociais" src="./img/instagram.svg"  alt="Icone Instagram"/>
+            <img class="img-redes-sociais" src="./img/linkedin.svg"  alt="Icone LinkedIn"/>
         </div>
+    </div>
+    <div class="container">
+        <footer>
+            <h3 class="foot">&copy; 2021 Todos os direitos reservados a Estante de Histórias | CRECI-PE PJ5658</h3>
+        </footer> 
     </div>
 </body>
 </html>
+
