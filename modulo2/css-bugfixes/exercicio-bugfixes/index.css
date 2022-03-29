@@ -17,6 +17,10 @@ h2 {
   text-align: center;
 }
 
+li {
+  list-style-position: inside;
+}
+
 input {
   height: 20px;
   width: 500px;
