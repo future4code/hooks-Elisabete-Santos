@@ -30,8 +30,9 @@ img {
 }
 
 div > p:first-child {
-  display: relative;
-  padding-top: 50px;
+  display: absolute;
+  padding: 50px 635px;
+  font-size: 20px;
 }
 
 div img {
