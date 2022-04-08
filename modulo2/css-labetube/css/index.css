@@ -107,12 +107,12 @@ body{
    footer {
       width: 100%;
       margin: auto;
-      font-size: 18px;
+      font-size: 15px;
       z-index: 1;
       position: relative;
       display: flex;
       flex-direction: row;
-      top: 90em;
+      top: 120em;
    }
 
    header{
