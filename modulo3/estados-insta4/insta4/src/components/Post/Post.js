@@ -10,6 +10,9 @@ import { SecaoComentario } from '../SecaoComentario/SecaoComentario'
 import iconeSalvarBranco from '../../img/save-white.svg'
 import iconeSalvar from '../../img/save.svg'
 
+import IconeSemContador from '../IconeSemContador/IconeSemContador'
+import { SecaoCompartilhar } from '../SecaoCompartilhar/SecaoCompartilhar'
+
 const PostContainer = styled.div`
   border: 1px solid gray;
   width: 300px;
@@ -49,7 +52,8 @@ class Post extends React.Component {
     comentando: false,
     numeroComentarios: 0,
     salvo: false,
-    numeroSalvos: 0
+    numeroSalvos: 0,
+    compartilhar: false
   }
 
   onClickCurtida = () => {
@@ -94,6 +98,10 @@ class Post extends React.Component {
     })
   }
 
+  onClickCompartilhar = () => {
+    this.setState({ compartilhar: !this.state.compartilhar })
+  }
+
   render() {
     let iconeCurtida
 
@@ -107,6 +115,13 @@ class Post extends React.Component {
 
     if (this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario} />
+    }
+
+
+    let componenteCompartilhar
+
+    if (this.state.compartilhar) {
+      componenteCompartilhar = <SecaoCompartilhar />
     }
 
 
@@ -139,13 +154,20 @@ class Post extends React.Component {
           valorContador={this.state.numeroComentarios}
         />
 
+        <IconeSemContador img="https://cdn-icons-png.flaticon.com/512/107/107784.png" onClickIcon={this.onClickCompartilhar} />
+
         <IconeComContador
           icone={iconeSalvo}
           onClickIcone={this.onClickSalvo}
           valorContador={this.state.numeroSalvos}
         />
+
+
+
+
       </PostFooter>
       {componenteComentario}
+      {componenteCompartilhar}
     </PostContainer>
   }
 }
