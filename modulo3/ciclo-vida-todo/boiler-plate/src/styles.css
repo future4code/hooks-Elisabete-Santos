@@ -1,0 +1,13 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  height: 350px;
+  background-color:	#FFDEAD;
+  border-radius: 15px;
+}
