@@ -77,10 +77,12 @@ class ListaUsuarios extends React.Component {
    render() {
       const mostrarLista = this.state.listaUsuarios.map((user) => {
          return (
-            <li key={user.id}>
-               <span onClick={() => this.detalhesUsuario(user.id)}>{user.name}</span>
-               <BtnDeletar onClick={() => this.deleteUser(user.id)}>X</BtnDeletar>
-            </li>
+            <Divlista>
+               <li key={user.id}>
+                  <span onClick={() => this.detalhesUsuario(user.id)}>{user.name}</span>
+                  <button onClick={() => this.deleteUser(user.id)}>X</button>
+               </li>
+            </Divlista>
          );
       });
 
@@ -105,6 +107,27 @@ class ListaUsuarios extends React.Component {
 }
 
 export default ListaUsuarios;
+
+let Divlista = styled.div`
+   border: 1px solid #F08080;
+
+   li {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   
+      button{
+         background-color: #F08080;
+         border: none;
+         font-size: 16px;
+         font-weight: bold;
+         margin-left: 10px;
+         color:#8B0000;
+         position: relative;
+      }
+   }
+`
 
 
 let Div = styled.div`
@@ -152,11 +175,3 @@ let BtnMudarTela = styled.button`
   }
 `;
 
-let BtnDeletar = styled.button`
-   background-color: 	#F08080;
-   border: none;
-   font-size: 16px;
-   font-weight: bold;
-   margin-left: 10px;
-   color:#8B0000;
-`
