@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Header } from "./components/Header/Header";
+import Matches from "./pages/Matches/Matches";
+import Usuarios from "./pages/Usuarios/Usuarios";
+import { MainContainer, DivContainer } from "./styled";
 
-function App() {
+const App = () => {
+  const [atualizarPagina, setAtualizarPagina] = useState("usuarios");
+
+  const mudarPagina = () => {
+    switch (atualizarPagina) {
+      case "usuarios":
+        return <Usuarios />;
+      case "matches":
+        return <Matches />;
+      default:
+        return <Usuarios />;
+    }
+  };
+
+  const onChangePagina = (value) => {
+    setAtualizarPagina(value);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer>
+      <DivContainer>
+        <Header onChangePagina={onChangePagina} />
+        {mudarPagina()}
+      </DivContainer>
+    </MainContainer>
   );
-}
+};
+
 
 export default App;
