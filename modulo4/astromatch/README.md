@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <br>
+    <p align="center" style="font-weight: bold;">🚀 Projeto Astromatch<p>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="justify">O  Astrodev deixou de legado para vocês um projeto com o objetivo de fazer um clone do Tinder: o Astromatch. 
+Vamos pedir para que você implemente o projeto, tentando usar ao máximo os conhecimentos adquiridos durante essa semana, a saber: Hooks (*useState e/ou* *useEffect)*</p>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+<h1>
+    <br>
+    <p style="font-weight: bold;">🧠 Contexto</p>
+</h1>
 
-### `npm start`
+O objetivo foi criar uma landing Page de uma empresa de tênis voltado para o conforto de quem trabalha em escritório.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Link do projeto do SURGE
+- Layout
+- Tecnologias Utilizadas
+- Requisitos
+- O que funcina e não funciona
+- Colaborador!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h1>
+    <br>
+    <p style="font-weight: bold;">🔗 Link do projeto no Surge</p>
+</h1>
 
-### `npm run build`
+https://clammy-beef.surge.sh/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🎨 Layout
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+### 🖥️ Desktop
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<p align="center">
+<img src="./src/images/desktop.png"/>
+</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📱 Mobile
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p>
+<img src="./src/images/mobile.png"/>
+</p>
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h1>
+    <br>
+    <p style="font-weight: bold;">🛠️ Tecnologias Utilizadas</p>
+</h1>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ <div style="display: inline_block"><br>
+ 
+  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="center" alt="Git" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
+ 
+</div>
 
-### Code Splitting
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<h1>
+    <br>
+    <p style="font-weight: bold;">⚙️ Requisitos</p>
+</h1>
 
-### Analyzing the Bundle Size
+Leia atentamente as especificações:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Tela inicial
+   Ao entrar na nossa aplicação, o usuário deve ser capaz de ver uma opção de perfil para escolher. Devem ser mostrados a foto, o nome e a descrição dos perfis. Dois botões devem estar na tela: um que permita "dar _match_" (uma escolha "positiva") e o outro que permita descartar a sugestão (uma escolha "negativa"). Por fim, deve existir um botão que leve para a tela de matches.
 
-### Making a Progressive Web App
+- Nessa tela, você vai usar os endpoints: _Get profile to choose_ (pegar perfil para escolher) e _Choose Person_ (escolher pessoa)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  <br>
 
-### Advanced Configuration
+2. Tela de matches
+   Essa tela é constituída de uma lista de usuários que "deram _match_" com o usuário que estiver usando a nossa aplicação. Devem ser mostradass as fotos e os nomes dos perfis.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Nessa tela, você vai usar o endpoint: _Get Matches_ (pegar matches)
 
-### Deployment
+  <br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Possibilidade de Resetar
+   O usuário da nossa aplicação pode limpar as informações dos matches que deram a qualquer momento em qualquer tela do site. Para isso, adicione um botão que fique bem claro que faz isso (com uma mensagem ou um ícone pertinente)
 
-### `npm run build` fails to minify
+- Nessa tela, você vai usar o endpoint: _Clear (limpar)_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+
+<h1>
+    <br>
+    <p style="font-weight: bold;">✔️ O que funciona</p>
+</h1>
+
+- Opção de curtir ou não curtir a pessoa
+- Tela secundaria com os matches
+- Botão de resetar todos os matches
+- Botão para voltar a tela principal ou ir para tela de matches
+
+<br>
+
+<h1>
+    <br>
+    <p style="font-weight: bold;">❌ O que não funciona</p>
+</h1>
+
+- Quando o projeto abre ele pula a primeira foto.
+
+<h1>
+    <br>
+    <p style="font-weight: bold;">👨‍💻 Contribuidor</p>
+</h1>
+
+_Qualquer dúvida ou sugestão, chama no contatinho!_
+
+<table>
+  <tr>
+     <td align="center"><a href="https://github.com/elisabetealves"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/elisabetealves" width="100px;" alt=""/><br /><sub><b>Elisabete Alves</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/mwlite/in/elisabete-alves-675637135">LinkedIn</a> </td>       
+  </tr>
+  
+</table>
+
+<br>
+
+### Feito com ❤️ e muita dedicação
