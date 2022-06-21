@@ -17,12 +17,19 @@ export const Main = styled.div`
     margin-top: 10px;
   }
 
+  h2{
+    font-size: 35px;
+    margin: 12px 25px;
+    font-weight: bold;
+    color: white; 
+  }
+
   p{
-    font-size: 25px;
+    font-size: 28px;
     margin: 12px 25px;
     font-weight: bold;
     color: white;
-    margin-top: 10px;
+    padding: 0px 70px 0px 70px;
   }
 
   span{
@@ -31,24 +38,27 @@ export const Main = styled.div`
 
   button{
    width: 150px;
-   margin-top: 70px;
-   margin: 10px 15px ;
+   margin-top: 50px;
+   //margin: 10px 15px ;
    padding: 8px;
    border-radius: 8px;
    background-color:#FF1493;
-   color:black;
+   color: black;
    font-weight: bold;
    font-size: 18px;
-   border-color:#FF1493;
+   border: none;
    margin-left: 580px;
+   box-shadow: 1px 1px 3px 2px gray;
    
    :hover{
      cursor: pointer;
      background-color: #e2eefa;
      color:#FF1493;
-   }
+     border: none;
    }
    
+  }
+  
    svg{
       width: 5rem;
       height: 5rem;

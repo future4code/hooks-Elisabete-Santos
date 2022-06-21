@@ -5,6 +5,8 @@ import { BASE_URL } from "../../constants/Base_url";
 import { goBack, goToListTrip, goHome } from "../../routes/Coordinator";
 import { Header } from '../../components/Header/Header'
 import { MainForm, ButtonDiv } from "./styled"
+import { IoIosRocket } from "react-icons/io"
+
 
 const LoginPage = () => {
 
@@ -45,10 +47,12 @@ const LoginPage = () => {
    return (
       <div>
          <Header
-            first={{ function: goToListTrip, text: "Início" }}
-            second={{ function: goHome, text: "Viagens" }}
+            first={{ function: goToListTrip, text: "Viagens" }}
+            second={{ function: goHome, text: "Início" }}
          />
          <MainForm>
+            <IoIosRocket />
+            <h1>LOGI<span>N</span></h1>
             <h2>Área Administrativa</h2>
             <input
                placeholder="Login"
