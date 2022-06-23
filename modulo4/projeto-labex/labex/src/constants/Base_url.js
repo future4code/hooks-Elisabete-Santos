@@ -1,1 +1,1 @@
-export const BASE_URL = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/elisabte-alves-hooks"
+export const BASE_URL = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/elisabete-alves-hooks"

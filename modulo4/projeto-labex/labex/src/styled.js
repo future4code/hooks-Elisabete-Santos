@@ -9,9 +9,11 @@ export const MainContainer = styled.div`
    width: 100vw;
    box-sizing: border-box;
    background-image: url(${espaco});
-   background-size: contain;
+   background-size: cover;
+   background-repeat: no-repeat;
+   /* background-size: contain;
    background-position: left;
-   background-repeat: round;
+   background-repeat: round; */
    background-position-y: top;
    background-blend-mode: color-burn;
    overflow: hidden;
