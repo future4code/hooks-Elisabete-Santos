@@ -18,6 +18,7 @@ export const Router = () => {
             <Route path="/admin/trips/list" element={<AdminHomePage />} />
             <Route path="/admin/trips/create" element={<CreateTripPage />} />
             <Route path="/admin/list/:id" element={<TripDetailsPage />} />
+            <Route path="*" element={<ErrorPage />} />
          </Routes>
       </BrowserRouter>
    )
