@@ -1,17 +1,20 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom"
 import { goToCreatTrip, goToDetailsPage } from "../../routes/Coordinator"
-import { BASE_URL } from "../../constants/Base_url";
-import { useRequestData, useProtectedPage } from "../../hooks/useRequestData";
-import { Trips, MainCoainter } from "./styled";
-import axios from "axios";
 import { Header } from '../../components/Header/Header'
+import { BASE_URL } from "../../constants/Base_url"
+import { useRequestData, useProtectedPage } from "../../hooks/useRequestData"
+import { Trips, MainCoainter } from "./styled"
+import axios from "axios"
+import { IoIosRocket } from "react-icons/io"
+import { BsTrash } from "react-icons/bs"
+
 
 const AdminHomePage = () => {
 
    useProtectedPage();
    const navigate = useNavigate();
-   const listTrip = useRequestData(`${BASE_URL}/trips`, {})
+   const listTrip = useRequestData(`${BASE_URL}/trips`, {});
 
    const DeleteTrip = (id) => {
       const HEADER = {
@@ -22,11 +25,11 @@ const AdminHomePage = () => {
       if (window.confirm("Tem certeza que deseja deletar essa viagem?")) {
          axios
             .delete(`${BASE_URL}/trips/${id}`, HEADER)
-            .then((response) => {
+            .then((res) => {
                navigate("/login");
                alert("Viagem deletada com sucesso!")
             })
-            .catch((error) => {
+            .catch((err) => {
                alert("Houve um erro, tente novamente!")
             });
       }
@@ -43,14 +46,14 @@ const AdminHomePage = () => {
                   </p>
                </div>
                <div>
-                  <button onClick={() => DeleteTrip(trip.id)}>X</button>
+                  <button onClick={() => DeleteTrip(trip.id)}><BsTrash /></button>
                </div>
             </Trips>
-         )
+         );
       })
 
    const logout = () => {
-      localStorage.removeItem("token")
+      localStorage.removeItem("token");
       navigate("/login");
    };
 
@@ -62,8 +65,8 @@ const AdminHomePage = () => {
             second={{ function: logout, text: "Logout", }}
          />
          <MainCoainter>
-
-            <h2>Área Administrativa</h2>
+            <IoIosRocket />
+            <h2>Lista das Viagens</h2>
             {trips}
          </MainCoainter>
       </div>
