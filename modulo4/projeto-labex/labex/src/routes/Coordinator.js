@@ -1,7 +1,3 @@
-import { useNavigate } from "react-router-dom"
-
-//const navigate = useNavigate()
-
 // Geral
 export const goBack = (navigate) => {
    navigate(-1)
