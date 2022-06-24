@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
    display: flex;
    justify-content: space-between;
-   background-color: #161625;
+   background-color:	#341933;
    align-items: center;
    position: fixed;
    top: 0;
@@ -20,45 +20,88 @@ export const MainContainer = styled.div`
     color: white;
     margin-top: 10px;
     cursor: pointer;
+    text-shadow: 0.1em 0.1em 0.15em #939;
+
+    @media(max-width:768px){
+    
+    }
+
+    @media(max-width:480px){
+      margin: 12px;
+    }
+  
   }
 
   span{
-    color:#FF1493;
+    color:#C71585;
   }
 `
 
 export const Buttons = styled.div`
   margin: 50px;
+
+  @media(max-width:768px){
+    
+  }
+
+  @media(max-width:480px){
+    margin: 77px;
+  }
  
 `
 
 export const ButtonOne = styled.button`
-   margin: 10px 15px ;
-   padding: 8px;
-   border-radius: 8px;
-   background-color: #e2eefa;
-   font-weight: bold;
-   color:#FF1493;
-   font-size: 16px;
+  margin: 10px 15px ;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #C71585;
+  color:black;
+  font-weight: 800;
+  font-size: 16px;
+  border: none;
+  text-shadow: 0.1em 0.1em 0.15em white;
    
-   :hover{
-     cursor: pointer;
-     background-color:#FF1493;
-     color:black;
-   }
+  :hover{
+    cursor: pointer;
+    background-color: #e2eefa;
+    color:#C71585;
+  }
+
+  @media(max-width:768px){
+    
+  }
+
+  @media(max-width:480px){
+    position: relative;
+    top: 2px;
+    margin: 0;
+    right: 5px;
+  }
 `
 export const ButtonTwo = styled.button`
-   margin: 10px 15px ;
-   padding: 8px;
-   border-radius: 8px;
-   background-color:#C71585;
-   color:black;
-   font-weight: bold;
-   font-size: 16px;
+  //margin: 10px 15px ;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #C71585;
+  color:black;
+  font-weight: 800;
+  font-size: 16px;
+  border: none;
+  text-shadow: 0.1em 0.1em 0.15em white; 
    
-   :hover{
-     cursor: pointer;
-     background-color: #e2eefa;
-     color:#FF1493;
-   }
+  :hover{
+    cursor: pointer;
+    background-color: #e2eefa;
+    color:#C71585;
+  }
+
+  @media(max-width:768px){
+    
+  }
+
+  @media(max-width:480px){
+    position: relative;
+    top: 2px;
+    margin-right: -60px;
+  }
 `
