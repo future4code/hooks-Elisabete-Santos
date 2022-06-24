@@ -35,4 +35,7 @@ export const ContainerError = styled.div`
    }
 `
 
-
+export const ErrorImg = styled.img`
+ width: 100vw;
+ height: 100vh;
+ `

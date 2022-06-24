@@ -14,6 +14,18 @@ export const MainForm = styled.div`
     margin-right: 10px;
     margin-top: 15px;
     text-shadow: 0.1em 0.1em 0.15em black;
+
+    @media(max-width:768px){
+      
+    }
+  
+    @media(max-width:480px){
+      font-size: 30px;
+      margin-left: -5px;
+      //text-shadow: 0.1em 0.1em 0.15em #939;
+      margin-bottom: 1.5rem;
+
+    }
   }
 
 
@@ -26,6 +38,14 @@ export const MainForm = styled.div`
     border-radius: 10px;
     box-shadow: 0.15em 0.15em 0.15em 0.15em white;
 
+    @media(max-width:768px){
+      
+    }
+  
+    @media(max-width:480px){
+      box-shadow: none;
+    }
+
 
     svg{
     width: 2.5rem;
@@ -34,6 +54,15 @@ export const MainForm = styled.div`
     color: #C71585;
     animation: teste 2s ease-in-out normal;
     margin-left: 10px;
+
+    @media(max-width:768px){
+      
+    }
+  
+    @media(max-width:480px){
+      color: white;
+    }
+
     }
   }
   input,
@@ -44,7 +73,8 @@ export const MainForm = styled.div`
     border-radius: 8px;
     border: none;
     height: 25px;
-   box-shadow: 0.1em 0.1em 0.15em #939;
+    box-shadow: 0.1em 0.1em 0.15em #939;
+
 
   }
   select{
@@ -82,5 +112,14 @@ export const ButtonDiv = styled.div`
         background-color: #e2eefa;
         color:#FF1493;
       }
+
+      @media(max-width:768px){
+      
+      }
+    
+      @media(max-width:480px){
+        margin-top: 20px;
+      }
+      
     }
 `

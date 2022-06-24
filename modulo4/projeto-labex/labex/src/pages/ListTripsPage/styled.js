@@ -7,6 +7,19 @@ export const Lista = styled.div`
   width: 98vw;
   font-weight: bold;
   justify-content: space-around;
+
+
+  @media(max-width:768px){
+      
+  }
+
+  @media(max-width:480px){
+    position: relative;
+    top: -280px;
+    margin: 50px;
+    width: 9vw;
+    height: 9vw;
+  }
   
   div{
     display: flex;
@@ -15,6 +28,11 @@ export const Lista = styled.div`
     max-width: 350px;
     height: 350px;
     border-radius: 15px;
+
+    @media(max-width:480px){
+      margin: 2px;
+    }
+    
   }
 
   svg{
@@ -29,6 +47,7 @@ export const Lista = styled.div`
     align-items: center;
     padding: 0 20px;
     background-color: #c2c1c1;
+    
   }
   
   button{
@@ -52,6 +71,10 @@ export const Lista = styled.div`
      background-color: #e2eefa;
      color:#C71585;
      border: none;
+    }
+
+    @media(max-width:480px){
+      margin-left: 60px;
     }
   }
 `

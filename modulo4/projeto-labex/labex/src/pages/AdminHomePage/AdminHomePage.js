@@ -61,12 +61,12 @@ const AdminHomePage = () => {
    return (
       <div>
          <Header
-            first={{ function: goToCreatTrip, text: "Criar Viagem", }}
+            first={{ function: goToCreatTrip, text: "Criar VG", }}
             second={{ function: logout, text: "Logout", }}
          />
          <MainCoainter>
-            <IoIosRocket />
-            <h2>Lista das Viagens</h2>
+
+            <h2>  <IoIosRocket /> Lista das Viagens</h2>
             {trips}
          </MainCoainter>
       </div>
