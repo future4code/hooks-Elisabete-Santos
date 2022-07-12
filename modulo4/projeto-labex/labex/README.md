@@ -1,70 +1,202 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <br>
+    <p align="center" style="font-weight: bold;">🚀 Projeto Labe </p>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+<p align="justify">☄️ O projeto hoje será um site para viagens espaciais, contém todas páginas abaixo funcionado.
 
-In the project directory, you can run:
+- `HomePage` → Para o usuário escolher entre Área Administrativa e Lista de Viagens
+- `ListTripsPage` → Para vermos todas as viagens
+- `ApplicationFormPage` → Para o usuário se candidatar à viagens, página que vai ter o formulário de inscrição
+- `LoginPage` → Para fazermos login como administrador
+- `AdminHomePage` → Para o administrador ver a lista de viagens e poder deletá-las ou acessar o detalhe de cada uma delas
+- `TripDetailsPage` → Para o administrador ver o detalhe de uma viagem específica, bem como os candidatos que aplicaram para ela
+- `CreateTripPage` → Formulário para o administrador criar uma nova viagem</p>
 
-### `npm start`
+<h1>
+    <br>
+    <p style="font-weight: bold;">🔗 Link do projeto no Surge</p>
+</h1>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://satisfying-rail.surge.sh/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+<h1>
+    <br>
+    <p style="font-weight: bold;">🔐 Informações para Login</p>
+</h1>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📧 Email: elisabete@gmail.com.br
 
-### `npm run build`
+### 🔑 Senha: 1234567
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h1>
+    <br>
+    <p style="font-weight: bold;">🧠 Contexto</p>
+</h1>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O objetivo foi criar um aplicativo para mostar novas mensagens.
 
-### `npm run eject`
+- Layout
+- Tecnologias Utilizadas
+- Bibliotecas Utilizadas
+- Requisitos
+- O que esta funcionando
+- O que não está funcionando
+- Saudações da Eli!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h1>
+    <br>
+    <p style="font-weight: bold;">🎨 Layout</p>
+</h1>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## web
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="center">
+     <img src="./images/desk1.png"  width="400px">   
+     <img src="./images/desk2.png"  width="400px">
+</p>
 
-## Learn More
+<p align="center">
+     <img src="./images/desk3.png"  width="400px">
+     <img src="./images/desk3.5.png"  width="400px">
+     </p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="center">
+     <img src="./images/desk4.png"  width="400px">
+     <img src="./images/desk5.png"  width="400px"> 
+</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="center">
+     <img src="./images/desk6.png"  width="400px">   
+     <img src="./images/desk7.png"  width="400px">   
+</p>
 
-### Code Splitting
+<p align="center">
+     <img src="./images/desk8.png"  width="400px">   
+     <img src="./images/desk9.png"  width="400px">   
+</p>
+## Mobile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p align="center">
+     <img src="./images/mobile1.png">  
+     <img src="./images/mobile2.png">  
+</p>
 
-### Analyzing the Bundle Size
+<p align="center">
+     <img src="./images/mobile3.png"> 
+     <img src="./images/mobile4.png">  
+</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+<h1>
+    <br>
+    <p style=" font-weight: bold;">🛠️ Tecnologias Utilizadas</p>
+</h1>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ <div style="display: inline_block"><br>
+ 
+  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="Git" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
+ 
+</div>
 
-### Advanced Configuration
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<h1>
+    <br>
+    <p style=" font-weight: bold;">📌 Bibliotecas Utilizadas</p>
+</h1>
 
-### Deployment
+ <div style="display: inline_block"><br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- npm
+- styled-components
+- axios
+- react-router-dom
+- material-UI
 
-### `npm run build` fails to minify
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+
+<h1>
+    <br>
+    <p style="font-weight: bold;">⚙️ Requisitos</p>
+</h1>
+
+A ideia será criar uma plataforma de gerenciamento de viagens espaciais. A plataforma terá **duas partes: uma pública e uma privada**. 😝
+
+<aside>
+⚠️ Muita atenção na descrição abaixo! Sempre que tiver dúvidas sobre o funcionamento do site, você pode referenciar esse trecho do enunciado
+
+</aside>
+
+Inicialmente, o usuário deve ser direcionado para uma página onde pode escolher entre dois fluxos:
+
+- **Área Administrativa** (necessário login para acessar - é a parte **privada**)
+- **Lista de Viagens** (para candidatos, sem login - é a parte **pública**)
+
+Caso o usuário escolha ver a **Lista de Viagens**, será redirecionado à parte pública (sem login) do site. Na parte **pública** qualquer usuário deverá ser capaz de:
+
+- Ver a lista de viagens existentes
+- Ter acesso a uma página com formulário para se inscrever para uma viagem existente
+- 💡 Dica
+
+  Os endpoints que serão integrados nesse fluxo são apenas os que não possuem token de autenticação nos headers! São eles: `Get Trips` e `Apply To Trips`.
+
+Caso o usuário escolha entrar na Área Administrativa, deverá ser redirecionado para uma página onde pode fazer login. Após fazer o login com uma conta válida, terá acesso à parte privada, onde deverá ser capaz de:
+
+- Ver a lista de todas as viagens com a possibilidade de deletá-las
+- Ter acesso a uma página com formulário para criar novas viagens
+- Ver os detalhes de uma viagem e, dentro desta página:
+
+  - Conseguir ver a lista de candidatos que se aplicaram para essa viagem e ainda estão pendentes
+  - Aprovar ou reprovar os candidatos para a viagem
+  - Ver lista atualizada de candidatos aprovados
+
+<br>
+
+<h1>
+    <br>
+    <p style="font-weight: bold;">✨ O que funciona</p>
+</h1>
+
+- Feito as rotas do site.
+- Quando usuário faz login é guardado no localStorage o token.
+- Pagina de detalhes do administrador.
+- Usuário só consegue acessar área ADM logado.
+- É possível se inscrever nas viagens.
+- Pessoa com admin consegue excluir as viagens.
+- Pessoa com admin consegue criar novas viagens.
+- Pessoa com admin consegue aprovar ou reprovar candidato nas viagens.
+
+<h1>
+    <br>
+    <p style="font-weight: bold;">	❌ O que não funciona</p>
+</h1>
+
+- No responsivo quando lista as Viagens para a pesssoa se inscrerver eu não consegui fazer rolar a página para mostrar todas as viagnes.
+
+<h1>
+    <br>
+    <p style="font-weight: bold;">👋 Saudações, Eli!</p>
+</h1>
+
+_Qualquer dúvida ou sugestão, chama no contatinho!_ [LinkedIn](https://www.linkedin.com/in/elisabete-a-santos/)
+
+ <img  style="border-radius: 10%;" src="https://i.picasion.com/pic91/8dd880c47cfc761e805745c941097adb.gif" alt="Gif Yeah" width="200">
+
+<br>
+
+### Feito com 💕 e muita dedicação

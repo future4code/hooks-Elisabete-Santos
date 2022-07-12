@@ -10,7 +10,7 @@ export const Header = (props) => {
    return (
       < MainContainer>
 
-         <h1 onClick={() => goHome(navigate)}>  Labe<span>X</span></h1>
+         <h1 onClick={() => goHome(navigate)}> Labe<span>X</span></h1>
          <Buttons>
             <ButtonOne onClick={() => props.first.function(navigate)}>{props.first.text}</ButtonOne>
             <ButtonTwo onClick={() => props.second.function(navigate)}>{props.second.text}</ButtonTwo>

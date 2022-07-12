@@ -5,10 +5,9 @@ import { BASE_URL } from "../../constants/Base_url"
 import { useProtectedPage } from "../../hooks/useRequestData"
 import { logout, goBack } from "../../routes/Coordinator"
 import { Header } from '../../components/Header/Header'
-import { Lista, CardViagem } from "./styled"
+import { Lista, CanditadosDiv, ButtonCandidato, CardViagem } from "./styled"
 
 const TripDetailsPage = () => {
-
    useProtectedPage();
    const token = localStorage.getItem("token");
    const HEADERS = {
@@ -16,25 +15,39 @@ const TripDetailsPage = () => {
          auth: token,
       },
    }
-
-   const { id } = useParams();
+   const { id } = useParams()
    const [detailsTrip, setDetailsTrip] = useState('')
    const [update, setUpdate] = React.useState(false)
 
    useEffect(() => {
 
       axios.get(`${BASE_URL}/trip/${id}`, HEADERS)
-         .then((response) => {
-            setDetailsTrip(response.data)
-            setUpdate(!update)
+         .then((res) => {
+            setDetailsTrip(res.data)
+            setUpdate(update)
          })
-         .catch((error) => {
-            alert(error.response)
+         .catch((err) => {
+            alert(err.response)
          })
-   }, [update])
+   }, [update]);
 
-
-
+   const DecideCandidate = (decisao, candidateID) => {
+      const BODY = {
+         approve: decisao,
+      };
+      axios
+         .put(
+            `${BASE_URL}/trips/${id}/candidates/${candidateID}/decide`,
+            BODY,
+            HEADERS
+         )
+         .then((res) => {
+            alert("Decisão registrada com sucesso!");
+         })
+         .catch((err) => {
+            alert("Houve um erro, tenta novamente");
+         });
+   };
 
    return (
       <div>
@@ -45,17 +58,53 @@ const TripDetailsPage = () => {
          <Lista>
             {detailsTrip && (
                <CardViagem>
-                  <p>Nome: {detailsTrip.trip.name}</p>
-                  <p>Planeta: {detailsTrip.trip.planet}</p>
-                  <p>Descrição: {detailsTrip.trip.description}</p>
-                  <p> Data: {detailsTrip.trip.date}</p>
-                  <p> Duração: {detailsTrip.trip.durationInDays}</p>
+                  <h2>Detalhes da Viagem</h2>
+                  <p className="top">Nome: {detailsTrip.trip.name}</p>
+                  <p className="top1">Planeta: {detailsTrip.trip.planet}</p>
+                  <p className="top2">Descrição: {detailsTrip.trip.description}</p>
+                  <p className="top3"> Data: {detailsTrip.trip.date}</p>
+                  <p className="top4"> Duração: {detailsTrip.trip.durationInDays}</p>
                </CardViagem>
             )}
+            <CanditadosDiv>
+               <div>
+                  <h2>Candidatos Pendentes</h2>
+                  {detailsTrip && detailsTrip.trip.candidates.length > 0 ? (
+                     detailsTrip.trip.candidates.map((candidato) => {
+                        return (
+                           <li key={candidato.id}>
+                              {candidato.name}
+                              <div>
+                                 <ButtonCandidato onClick={() => DecideCandidate(true, candidato.id)}>
+                                    Aprovar
+                                 </ButtonCandidato>
+
+                                 <ButtonCandidato onClick={() => DecideCandidate(false, candidato.id)}>
+                                    Reprovar
+                                 </ButtonCandidato>
+                              </div>
+                           </li>
+                        );
+                     })
+                  ) : (
+                     <p>Não há candidatos pendentes</p>
+                  )}
+               </div>
+
+               <div>
+                  <h2>Canditados Aprovados</h2>
+                  {detailsTrip && detailsTrip.trip.approved.length > 0 ? (
+                     detailsTrip.trip.approved.map((candidato) => {
+                        return <li key={candidato.id}>{candidato.name}</li>;
+                     })
+                  ) : (
+                     <p>Não há candidatos aprovados</p>
+                  )}
+               </div>
+            </CanditadosDiv>
          </Lista>
-
       </div>
-   )
-}
+   );
+};
 
-export default TripDetailsPage
+export default TripDetailsPage;
