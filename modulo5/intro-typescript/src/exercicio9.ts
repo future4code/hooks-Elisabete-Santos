@@ -13,12 +13,14 @@
 //  - Possui ensino médio completo;
 //  - Possui pelo menos 40 horas livres na semana para o curso integral e 20 horas para o curso noturno.
 
-function estudanteLabenu(idade: number, ensinoMedio: string, horasDisponivel: number, curso:string):boolean {
-   if(idade >= 18 && ensinoMedio === "sim" && horasDisponivel >= 40 && curso === "integral" || "nortuno"){
-      return true
+function estudanteLabenu(idade: number, ensinoMedio: boolean, horasDisponivel: number, curso:string):boolean {
+   if(idade >= 18 && ensinoMedio && curso.toLowerCase() === "nortuno"){
+      return horasDisponivel >= 20 ? true : false
+   }else if(idade >= 18 && ensinoMedio && curso.toLowerCase() === "integral"){
+      return horasDisponivel >= 40 ? true : false
    }else{
       return false
    }
 }
 
-estudanteLabenu(20, "sim", 50, "noturno")
+console.log(estudanteLabenu(20, true, 50, "noturno"))
