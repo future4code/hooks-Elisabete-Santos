@@ -1,0 +1,31 @@
+//Para requisições com body:
+//Content-Type: application/json
+
+//Para requisições com headers
+//Authorization: "token"
+
+###
+GET http://localhost:3003/allUsers
+
+###
+GET http://localhost:3003/users?type=ADMIN
+
+###
+GET http://localhost:3003/users/Alice
+
+###
+POST http://localhost:3003/create/users
+Content-Type: application/json
+
+{
+  "name": "Lucy",
+  "email": "lucy@email.com",
+  "type": "ADMIN",
+  "age": 30  
+}
+
+###
+PUT http://localhost:3003/users/4
+
+###
+DELETE http://localhost:3003/delete/user/5
