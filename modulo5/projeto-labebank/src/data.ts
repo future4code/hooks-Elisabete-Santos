@@ -1,12 +1,18 @@
+export enum Extract {
+   DEBITO = "Débito",
+   DEPOSITO = "Deposito",
+}
+
 // Crie mais um tipo: para representar as transações que serão salvas no extrato
 export type Transaction = {
    value: number,
-   date: number | string,
-   description: string
+   date: string,
+   description:  Extract.DEBITO | Extract.DEPOSITO
 }
 
 //Crie um tipo para representar uma conta para o usuário
 export type User = {
+   id: number,
    name: string,
    cpf: string,
    birthDate: Date | number | string,
@@ -17,6 +23,7 @@ export type User = {
 //Crie um array global que armazene usuários na aplicação. Caso queira, pode iniciar este array com valores pré-definidos.
 export let users: User[] = [
    {
+      id: 1,
       name: "Gabriela Correia",
       cpf: "599.956.600-24",
       birthDate: "09/10/1989",
@@ -25,16 +32,17 @@ export let users: User[] = [
          {
             value: 10000,
             date: "22-12-2021",
-            description: "deposito"
+            description: Extract.DEBITO
         },
         {
             value: 5000,
             date: "15-01-2022",
-            description: "deposito"
+            description: Extract.DEPOSITO
         }
       ]
    },
    {
+      id: 2,
       name: "Bruno Henrique",
       cpf: "166.959.730-08",
       birthDate: "24/11/1999",
@@ -43,26 +51,27 @@ export let users: User[] = [
          {
             value: 20000,
             date: "22-03-2020",
-            description: "deposito"
-        },
+            description: Extract.DEPOSITO
+         },
         {
             value: 5000,
             date: "15-06-2021",
-            description: "deposito"
+            description: Extract.DEPOSITO
         },
         {
-         value: 10000,
-         date: "05-12-2021",
-         description: "deposito"
+            value: 10000,
+            date: "05-12-2021",
+            description: Extract.DEPOSITO
          },
          {
             value: 15000,
             date: "15-06-2022",
-            description: "deposito"
+            description: Extract.DEBITO
          }
       ]
    },
    {
+      id: 3,
       name: "Ana Texeira",
       cpf: "880.381.060-91",
       birthDate: "07/5/1993",
@@ -71,11 +80,12 @@ export let users: User[] = [
          {
             value: 5000,
             date: "08-03-2022",
-            description: "deposito"
+            description: Extract.DEPOSITO
          }
       ]
    },
    {
+      id: 4,
       name: "Diego Prado",
       cpf: "770.325.420-77",
       birthDate: "28/12/1987",
@@ -84,16 +94,17 @@ export let users: User[] = [
          {
             value: 8000,
             date: "02-01-2021",
-            description: "deposito"
+            description: Extract.DEPOSITO
         },
         {
             value: 2000,
             date: "19-04-2022",
-            description: "deposito"
+            description: Extract.DEPOSITO
         }
       ]
    },
    {
+      id: 5,
       name: "Vitoria Santos",
       cpf: "075.357.920-06",
       birthDate: "01/11/1967",
@@ -102,7 +113,7 @@ export let users: User[] = [
          {
             value: 5000,
             date: "08-03-2022",
-            description: "deposito"
+            description: Extract.DEPOSITO
          }
       ]
    },
