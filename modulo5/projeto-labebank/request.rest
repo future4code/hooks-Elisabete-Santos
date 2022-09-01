@@ -1,0 +1,27 @@
+###
+GET http://localhost:3003/allUsers
+
+###
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+   "name": "John Silva",
+   "cpf": "123.456.789.09",
+   "birthDate": "25/06/1989",
+   "statement": []
+}
+
+###
+GET http://localhost:3003/users/599.956.600-24
+
+###
+PUT http://localhost:3003/users
+Content-Type: application/json
+
+{
+   "name": "Gabriela Correia",
+   "cpf": "599.956.600-24",
+   "value": 1000,
+   "date": "22-12-2021"
+}
