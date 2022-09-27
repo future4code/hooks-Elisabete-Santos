@@ -1,0 +1,38 @@
+###
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+   "name": "Elisa",
+   "email": "lizzbeth.lizz.diaz@gmail.com",
+   "password": "568932l"
+}
+
+###
+GET http://localhost:3003/users
+
+###
+POST http://localhost:3003/products
+Content-Type: application/json
+
+{
+   "name": "Notebook",
+   "price": 2934.99,
+   "image_url": "https://i.picsum.photos/id/0/5616/3744.jpg?hmac=3GAAioiQziMGEtLbfrdbcoenXoWAW-zlyEAMkfEdBzQ"
+}
+
+###
+GET http://localhost:3003/products
+
+###
+POST http://localhost:3003/purchases 
+Content-Type: application/json
+
+{
+   "userID": "5e673c79-4279-4aa9-a172-7b440d2e54f9", 
+   "productID": "402812f3-1c1a-4e82-9935-4ab96bba62a1", 
+   "quantity": 2
+}
+
+###
+GET http://localhost:3003/users/5e673c79-4279-4aa9-a172-7b440d2e54f9/purchases
