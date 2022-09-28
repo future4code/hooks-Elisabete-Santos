@@ -17,8 +17,13 @@ export const createUser = async (req: Request, res: Response) => {
 
         const newUser = new User(id, email, password)
     
-        await connection(TABLE_USERS)
-        .insert(newUser)
+        //await connection(TABLE_USERS).insert(newUser)
+
+        await connection(TABLE_USERS).insert({
+            id: newUser.getId(),
+            email: newUser.getEmail(),
+            password: newUser.getPassword()
+        })
         
         res.status(201).send({ message: "Usuário criado", user: newUser })
     } catch (error) {

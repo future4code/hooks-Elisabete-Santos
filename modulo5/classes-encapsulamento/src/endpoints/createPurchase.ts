@@ -11,6 +11,9 @@ export const createPurchase = async (req: Request, res: Response) => {
         const productId = req.body.productId
         const quantity = req.body.quantity
 
+        const id = Date.now().toString()
+
+
         if (!userId || !productId || !quantity) {
             throw new Error("Body inválido.")
         }
@@ -33,26 +36,29 @@ export const createPurchase = async (req: Request, res: Response) => {
             throw new Error("Produto não encontrado.")
         }
         
-        const product: Product = {
-            id: findProduct[0].id,
-            name: findProduct[0].name,
-            price: findProduct[0].price
-        }
+        const product = new Product(findProduct[0].id, findProduct[0].name, findProduct[0].price)
+        // const product: Product = {
+        //     id: findProduct[0].id,
+        //     name: findProduct[0].name,
+        //     price: findProduct[0].price
+        // }
 
-        const newPurchase: Purchase = {
-            id: Date.now().toString(),
-            userId,
-            productId,
-            quantity,
-            totalPrice: product.price * quantity
-        }
+
+        const newPurchase = new Purchase(id, userId, productId, quantity, product.getPrice() * quantity)
+        // const newPurchase: Purchase = {
+        //     id: Date.now().toString(),
+        //     userId,
+        //     productId,
+        //     quantity,
+        //     totalPrice: product.price * quantity
+        // }
 
         await connection(TABLE_PURCHASES).insert({
-            id: newPurchase.id,
-            user_id: newPurchase.userId,
-            product_id: newPurchase.productId,
-            quantity: newPurchase.quantity,
-            total_price: newPurchase.totalPrice
+            id: newPurchase.getId,
+            user_id: newPurchase.getUserId,
+            product_id: newPurchase.getProductId,
+            quantity: newPurchase.getQuantity,
+            total_price: newPurchase.getTotalPrice
         })
 
         res.status(201).send({ message: "Compra registrada", purchase: newPurchase })

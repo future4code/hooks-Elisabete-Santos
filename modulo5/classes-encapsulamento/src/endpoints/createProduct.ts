@@ -17,7 +17,14 @@ export const createProduct = async (req: Request, res: Response) => {
 
         const newProduct = new Product(id, name, price)
 
-        await connection(TABLE_PRODUCTS).insert(newProduct)
+        //await connection(TABLE_PRODUCTS).insert(newProduct)
+
+        await connection(TABLE_PRODUCTS).insert({
+            id: newProduct.getId(),
+            name: newProduct.getName(),
+            price: newProduct.getPrice()
+        })
+        
         
         res.status(201).send({ message: "Produto criado", product: newProduct })
     } catch (error) {
