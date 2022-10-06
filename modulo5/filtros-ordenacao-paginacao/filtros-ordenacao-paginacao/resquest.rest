@@ -1,0 +1,12 @@
+GET http://localhost:3003/user-name?name=João
+
+###
+
+GET http://localhost:3003/user-type/Operations
+
+###
+
+GET http://localhost:3003/user-order?name=&type=CX&order=asc&sort
+
+### 
+GET http://localhost:3003/user-order-page?name=&type=CX&order=asc&sort&page=1
