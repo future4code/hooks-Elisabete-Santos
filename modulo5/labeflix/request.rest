@@ -1,0 +1,23 @@
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "teste",
+    "email": "email@email.com",
+    "password": "23432535"
+}
+
+###
+GET http://localhost:3003/user
+
+###
+
+POST http://localhost:3003/movie/create 
+Content-Type: application/json
+
+{
+    "title": "Jogos Mortais", 
+    "description": "O filme é centrado na luta contra o tempo de dois homens, o médico Dr. Lawrence, e o fotógrafo Adam Stanheight. Eles acordam em um banheiro imundo presos pelos pés numa corrente bastante forte.", 
+    "duration": 110, 
+    "release": 2004
+}
