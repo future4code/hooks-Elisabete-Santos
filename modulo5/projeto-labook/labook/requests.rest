@@ -1,0 +1,21 @@
+###
+POST http://localhost:3003/user
+Content-Type: application/json
+
+{
+   "name": "Bryana Salvatore", 
+   "email": "bryanna@gmail.com", 
+   "password": "bry123456"
+}
+
+###
+POST http://localhost:3003/post 
+Content-Type: application/json
+
+{
+   "photo": "link da imagem",   
+   "description": "imagem de alguma coisa teste", 
+   "type": "normal",
+   "created_at": "2022/09/20",
+   "author_id": "1666286710517"
+}
