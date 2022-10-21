@@ -1,0 +1,12 @@
+POST http://localhost:3003/user
+Content-Type: application/json
+
+{
+   "email": "eli@email.com",
+   "name": "Elisa",
+   "password": "123456@"
+}
+
+GET http://localhost:3003/user/all
+
+DELETE http://localhost:3003/user/delete/001
