@@ -19,3 +19,34 @@ Content-Type: application/json
    "created_at": "2022/09/20",
    "author_id": "1666286710517"
 }
+
+### 
+GET http://localhost:3003/post/find/dfbfe4ce-9148-456f-9fd0-cc506e5edfd3
+
+
+### 
+POST http://localhost:3003/friend
+Content-Type: application/json
+
+{
+   "userId": "001", 
+   "friendId": "c1d5fd36-7bb5-4299-81e9-5d044a51c807"
+}
+
+### 
+DELETE http://localhost:3003/friend/delete 
+Content-Type: application/json
+
+{
+   "userId": "c1d5fd36-7bb5-4299-81e9-5d044a51c807", 
+   "friendId": "001"
+}
+
+### 
+GET http://localhost:3003/friend/feed/dfbfe4ce-9148-456f-9fd0-cc506e5edfd3
+
+### 
+GET http://localhost:3003/post/all/4
+
+### 
+GET http://localhost:3003/post/all-posts-sorted

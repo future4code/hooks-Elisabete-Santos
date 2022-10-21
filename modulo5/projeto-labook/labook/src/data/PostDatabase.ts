@@ -1,4 +1,5 @@
 import post from "../model/post"
+import { typePostSortedByType } from "../model/postSortedTypeDTO";
 import { BaseDatabase } from "./BaseDatabase"
 
 export class PostDatabase extends BaseDatabase {
@@ -23,17 +24,50 @@ export class PostDatabase extends BaseDatabase {
         throw new Error("Erro do banco !");
       }
     }
-   }
+  }
 
-//    async selectById(id: string): Promise<post> {
-//     try {
-//         const result = await BaseDatabase.connection(PostDatabase.TABLE_NAME)
-//             .select("*")
-//             .where({ id })
+  async find (id:string):Promise<any>{
+    try {
+      const result = await PostDatabase.connection
+      .select("*")
+      .where({ id })
+      .from(PostDatabase.TABLE_NAME)
+    
+      return result
+    } catch (error: any) {
+      throw new Error(error.sqlMessage || error.message)
+    }
+  }
 
-//         return result[0]
-//     } catch (error: any) {
-//         throw new Error(error.sqlMessage || error.message)
-//     }
-// }
+  async selectAllPostsByPage(page: number) {
+    try {
+      const size = 5
+
+      let offset = size * (page - 1)
+
+      const result = await BaseDatabase.connection(PostDatabase.TABLE_NAME)
+        .select("*")
+        .limit(size)
+        .offset(offset)
+
+        return result
+    } catch (error: any) {
+      throw new Error(error.sqlMessage || error.message)
+    }
+  }
+
+  async selectPostByType(value: typePostSortedByType) {
+    try {
+        const result = await BaseDatabase.connection(PostDatabase.TABLE_NAME)
+            .select("*")
+            .where("type", "like", `${value.type}`)
+            .orderBy(value.sort, value.order)
+            
+        return result
+    } catch (error: any) {
+        console.log(error.message)
+        throw new Error(error.sqlMessage || error.message)
+    }
+}
+
 }

@@ -1,6 +1,7 @@
 import { Request, Response } from "express"
 import { PostBusiness } from "../business/PostBusiness"
 import { PostInputDTO } from "../model/postDTO"
+import { typePostSortedByType } from "../model/postSortedTypeDTO"
 
 
 export class PostController {
@@ -33,15 +34,62 @@ export class PostController {
        }
    }
 
-//    async getPostById(req: Request, res: Response) {
-//     try {
-//         const id = req.params.id;
-  
-//         const result = await this.PostBusiness.getPostById(id)
-  
-//         res.status(201).send(result);
-//       } catch (error: any) {
-//         return res.status(400).send(error.message)
-//       }
-//}
+   async find (req:Request, res:Response):Promise<void>{
+        try {
+            const  id  = req.params.id as string
+
+            const input = id
+
+            const postBusiness = new PostBusiness()
+            const result = await postBusiness.find(input)
+
+            res.status(200).send(result)
+        } catch (error:any) {
+         res.status(500).send(error.sqlMessage || error.message);
+        }
+    }
+
+    async getPostsByPage(req: Request, res: Response) {
+        try {
+            const token: string = req.headers.authorization as string
+
+            const page = Number(req.params.page)
+
+            const post = new PostBusiness()
+
+            const postByPage = await post.getPostsByPage(page, token)
+
+            res.status(201).send(postByPage)
+
+        } catch (error: any) {
+            res.send({ message: error.sqlMessage || error.message })
+        }
+    }
+
+    async getPostsByTypeAndOrder(req: Request, res: Response) {
+        try {
+            const token: string = req.headers.authorization as string
+
+            let type= String(req.query.type)
+            let sort = String(req.query.sort)
+            let order = String(req.query.order)
+
+            const postsSorted:typePostSortedByType = {
+                type: type,
+                sort: sort,
+                order: order
+            }
+
+            const post = new PostBusiness()
+
+            const postsSortedByType = await post.getPostByType(postsSorted, token)
+            
+            console.log(postsSortedByType);
+            
+            res.status(201).send({postsSortedByType})
+
+        } catch (error: any) {
+            res.send({ aaaaamessageeee: error.message })
+        }
+    }
 }

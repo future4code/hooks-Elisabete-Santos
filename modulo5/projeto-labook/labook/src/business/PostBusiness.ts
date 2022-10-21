@@ -2,6 +2,7 @@ import { PostDatabase} from "../data/PostDatabase"
 import { CustomError } from "../error/CustomError"
 import { InvalidRequest } from "../error/InvalidRequest"
 import { PostInputDTO } from "../model/postDTO"
+import { typePostSortedByType } from "../model/postSortedTypeDTO"
 import { generateId } from "../services/generateId"
 
 export class PostBusiness {
@@ -37,27 +38,83 @@ export class PostBusiness {
       }
    }
 
-//    public getPostById =async (id: string) => {
-//    try {
-   
-//        const postDatabase = await this.postDatabase.getPostById(id)
-//        if(!postDatabase){
-//          throw new Error("Post não localizado");
-//        }
-   
-//        const result = {
-//          id: postDatabase.id,
-//          photo: postDatabase.photo,
-//          description: postDatabase.description,
-//          type: postDatabase.type,
-//          created_at: postDatabase.created_at,
-//          author_id: postDatabase.author_id,
-//        }
-   
-//        return result;
+   async find(id: string) {
 
-//    } catch (error:any) {
-//       throw new Error(error.sqlMessage || error.message)
-//    }
-//   }
+      if (!id) {
+         throw new Error('Not found')
+      }
+
+      if (id !== String(id)) {
+         throw new Error('Invalid values')
+      }
+
+          
+      const postDB = await new PostDatabase().find(id)
+        
+      if (!postDB[0]) {
+          const message = "Post not found"
+          throw new Error(message)
+      }
+ 
+      const post: PostInputDTO = {
+          id: postDB[0].id,
+          photo: postDB[0].photo,
+          description: postDB[0].description,
+          type: postDB[0].type,
+          created_at: postDB[0].created_at,
+          author_id: postDB[0].author_id,
+      }
+
+      return post
+  }
+
+  async getPostsByPage(page: number, token: string) {
+
+      if (page !== Number(page)) {
+       throw new Error('Invalid values')
+      }
+
+      if (!token) {
+       throw new Error('Please provide a token')
+      }
+
+      if (token !== String(token)) {
+       throw new Error('Invalid values')
+      }
+
+      const postByPage = await new PostDatabase().selectAllPostsByPage(page)
+
+      return postByPage
+   }
+
+
+   async getPostByType(value: typePostSortedByType, token:string){
+        
+      if (!token) {
+          throw new Error('Please provide a token')
+      }
+
+      if (token !== String(token)) {
+          throw new Error('Invalid values')
+      }
+      
+      if (!value.type || !value.order || !value.sort) {
+          throw new Error('Fill in the fields, please')
+      }
+
+      if (value.type !== String(value.type) || value.order !== String(value.order) || value.sort !== String(value.sort)) {
+          throw new Error('Invalid values')
+      }
+
+      const post = {
+          type: value.type,
+          sort:value.sort,
+          order: value.order
+      }
+
+      const posts = await new PostDatabase().selectPostByType(post)
+
+      return posts
+  }
+  
 }
