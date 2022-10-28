@@ -2,7 +2,7 @@ type authenticationData = {
    id: string
 }
 
-export default class User {
+export class User {
    constructor(
        private id: string,
        private name: string,

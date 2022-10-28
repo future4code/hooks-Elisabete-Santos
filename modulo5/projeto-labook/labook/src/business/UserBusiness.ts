@@ -5,6 +5,7 @@ import { InvalidRequest } from "../error/InvalidRequest";
 import { ShortName } from "../error/ShortName";
 import { UserInputDTO } from "../model/userDTO";
 import { generateId } from "../services/generateId";
+import { User } from "../model/user"
 
 
 export class UserBusiness {
@@ -44,4 +45,11 @@ export class UserBusiness {
          throw new CustomError(error.statusCode, error.message || error.sqlMessage)
       }
    }
+
+   public getAllUsers = async():Promise<User[]> => {
+      const userDatabase = new UserDatabase()
+      const getResult = await userDatabase.getAllUsers()
+  
+      return getResult
+    }
 }

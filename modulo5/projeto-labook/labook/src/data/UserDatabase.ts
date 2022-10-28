@@ -1,5 +1,5 @@
-import user  from "../model/user";
-import { BaseDatabase } from "./BaseDatabase";
+import { BaseDatabase } from "./BaseDatabase"
+import { User } from "../model/user"
 
 export class UserDatabase extends BaseDatabase {
    private static TABLE_NAME = "labook_users";
@@ -15,5 +15,10 @@ export class UserDatabase extends BaseDatabase {
       } catch (error: any) {
          throw new Error(error.message)
       }
-   };
+   }
+
+   public getAllUsers = async ():Promise<User[]> => {
+      const getResult = await UserDatabase.connection("labook_users").select()
+      return getResult
+    }
 }
