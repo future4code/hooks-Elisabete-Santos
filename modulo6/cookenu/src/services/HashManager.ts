@@ -1,14 +1,18 @@
-import * as bcript from "bcryptjs";
+import * as bcrypt from "bcryptjs";
+import { VerificationObjectDTO } from "../model/VerificationObjectDTO";
 
 export class HashManager {
-  async hash(plainText: string): Promise<string> {
-    const count = Number(process.env.BCRYPT_COST);
-    const salt = await bcript.genSalt(count);
+  public generateHash = async (password: string): Promise<string> => {
+    // const count = Number(process.env.BCRYPT_COST);
+    const round = 12;
+    const salt = await bcrypt.genSalt(round);
 
-    return bcript.hash(plainText, salt);
-  }
+    return bcrypt.hash(password, salt);;
+  };
 
-  async compare(plainText: string, cypherText: string): Promise<boolean> {
-    return bcript.compare(plainText, cypherText);
-  }
+  public verifyHash = async (
+    input: VerificationObjectDTO
+  ): Promise<boolean> => {
+    return await bcrypt.compare(input.password, input.hash);
+  };
 }
