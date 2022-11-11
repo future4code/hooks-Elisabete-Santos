@@ -1,7 +1,7 @@
 import express from "express";
 import { UserBusiness } from "../business/UserBusiness";
 import { UserDatabase } from "../data/UserDatabase";
-import { UserController } from "./UserController";
+import { UserController } from "../controller/UserController";
 
 export const userRouter = express.Router();
 
@@ -17,5 +17,4 @@ userRouter.post("/follow", userController.followUser)
 userRouter.post("/unfollow", userController.unfollowUser)
 userRouter.get("/feed", userController.getFeed)
 userRouter.delete("/delete/:id", userController.deleteUser)
-
 userRouter.get("/:id", userController.getOtherProfile)
