@@ -23,11 +23,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNkOTM4MWVkLTVhNTMt
 
 {
    "name": "produto1", 
-   "tag": ["tag1", "tag3"]
+   "tag": ["jeans", "verão", "calor"]
 }
 
 ### 
-GET http://localhost:3000/product/
+GET http://localhost:3000/product/getAll
 
 ### 
 GET http://localhost:3000/product/{:id}
