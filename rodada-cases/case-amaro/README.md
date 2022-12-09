@@ -103,7 +103,7 @@ Criar um arquivo .env com os seguintes dados sensíveis:
 
 Banco de dados utilizado: **MySQL WorkBench**
 
-### e Divirta-se :)
+### `Divirta-se :)`
 
 <br>
 
