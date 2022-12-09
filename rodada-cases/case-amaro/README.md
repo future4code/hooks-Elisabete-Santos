@@ -1,13 +1,10 @@
 <h1 align="center">
     <br>
-    <p align="center"> 🚀 Amaro <p>
-</h1>
-<br>
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=ffffff&size=38&center=true&vCenter=true&width=500&lines=👗+Case+Amaro+👔+!!!;)](https://git.io/typing-svg)
 
 </h1>
-<p align="center">
-<img src="LAMA/image/musical3.png" width="40%" height="20%"/>
-</p>
+<br>
 
 <br>
 
@@ -15,14 +12,11 @@
 
 <br>
 
-O projeto é um sistema interno de um novo festival de música, então sejam bem-vindos ao **LAMA**.
+O projeto é uma criação de API para cadastro e consulta de produtos
 
 <br>
 
-- 🎯 Objetivo do Projeto
-- 📌 Funcionalidades
-- ✔️ Requesitos Mínimos
-- 🔗 Link da documentação do postman
+- 📌 Requesitos
 - 📚 Aprendizado
 - 🛠️ Tecnologias Utilizadas
 - 📦 Pacotes Utilizados
@@ -30,94 +24,25 @@ O projeto é um sistema interno de um novo festival de música, então sejam bem
 - 🔃 Rotas
 - ✨ O que funciona
 - ❌ O Que Não Funciona
-- 👨‍💻 Desenvolvedores
+- 👨‍💻 Desenvolvedor(a)
 
 <br>
 
-## 🎯 Objetivo do Projeto
+## 📌 Requisitos Mínimos
 
-O **LAMA**, _Labenu Musical Awards_, um festival com várias bandas famosas para a formatura da sua turma que ocorrerá em um final de semana na Sexta, Sábado e Domingo, no final, vocês podem eleger a banda que mais gostaram! Entretanto vocês só serão merecedores se entregarem um sistema impecável que permita o gerenciamento completo desses shows.
+**End-point para inserção de dados**
 
-Este é um projeto elaborado em equipe que busca reproduzir as funcionalidades de um sistema para o gerenciamento completo de shows musicais. Consistindo basicamente no desenvolvimento de um backend voltado para um padrão de arquitetura de microserviços e integrado com o banco de dados MySql.
+- O cliente poderá enviá-los em arquivos json ou xml e a API deverá inserir no banco de dados.
+- Escolha o banco de dados que achar melhor.
 
-<br>
+**End-point para consulta destes produtos**
 
-## 📌 Funcionalidades
+- Pode ser consultado por: id, nome ou tags. Caso a consulta seja por uma tag ou nome, deverá listar todos os produtos com aquela respectiva busca, poderá ser feito em um ou mais end-points.
 
-<br>
+**Requisitos Obrigatórios**
 
-1. **Cadastro**
-
-   O nosso sistema deve permitir o registro os usuários que irão usá-lo. Para se cadastrar, é necessário passar um email, um nome e uma senha, e também uma função dentro do sistema. Você pode ser um cliente (usuário normal) ou um administrador do sistema (admin). O usuário deve poder se logar automaticamente após o cadastro. Caso tenha interesse, tente tornar o código de cadastro mais testável utilizando a inversão de dependência.
-
-2. **Login**
-
-   Para realizar o login, basta informar seu e-mail e a sua senha. O retorno deve conter o token de autenticação do usuário. Caso tenha interesse, tente tornar o código de cadastro mais testável utilizando a inversão de dependência.
-
-3. **Endpoint de registrar banda**
-
-   O nosso sistema deve deixar registrado todas as bandas que participarão dos três dias de shows. Para uma banda ser criada, precisamos das informações: nome, gênero musical principal a qual ela se identifica e o nome de um responsável (que pode ser qualquer membro dela). Não podem existir duas bandas com o mesmo nome. Somente administradores podem registrar bandas. Faça ao menos dois testes para checar se os dados estão corretos, sendo um em caso de erro e outro em caso de acerto.
-
-4. **Endpoint de visualização de detalhes sobre a banda**
-
-   Esse endpoint deve receber o id ou o nome da banda e retornar as todas as informações salvas sobre ela.
-
-5. **Endpoint de adicionar um show a um dia**
-
-   Para cadastrar um show, o endpoint precisa do id da banda, o dia (sexta, sábado ou domingo) e o horário em que ela irá se apresentar. Deve haver uma validação para indicar se o horário é válido (ou seja, se está entre 08h e 23h). Além disso os shows só podem ser marcados em horários redondos, ou seja, pode ser 08h - 09h ou 09h - 13h mas não pode ser 09h - 10h30 ou 10h30 - 14h.
-
-   Caso já exista um show marcado para o dia e o horário em questão, o seu endpoint deve retornar um erro. Faça ao menos dois testes para checar se os dados estão corretos, sendo um em caso de erro e outro em caso de show em data repetida.
-
-6. **Endpoint de pegar todos os shows de uma data**
-
-   Recebe um dia (sexta, sábado ou domingo) e retorna todos os shows daquela data (ordenados pelo horário), mostrando somente o nome da banda e o gênero musical principal.
-
-<br>
-
-**-> DESAFIOS**
-
-7. **Endpoint de criar um ingresso**
-
-O caso de uso desse endpoint é o administrador do sistema querendo criar ingressos para serem vendidos. Para criar, precisa indicar: nome do ingresso, valor, o id do evento e a quantidade de ingressos. No banco, você deve guardar a quantidade de ingressos totais e criar um campo "quantidade de ingressos vendidos" com o valor 0 para guardar esse registro. Somente administradores podem registrar ingressos.
-
-8. **Comprar ingresso**
-
-Deve receber a quantidade de ingressos e o nome. Deve retornar erros específicos para um nome inválido, ingresso não encontrado e quantidade inválida (ou seja se existem menos ingressos disponíveis do que o usuário quer comprar)
-
-9. **Adicionar foto**
-
-Você deve criar um endpoint que adiciona uma foto para a galeria de um evento. Elas devem ser armazenadas como links no banco de dados.
-
-10. **Pegar todas as fotos**
-
-O endpoint receberá o identificador do evento e devolverá todas as fotos deste.
-
-<br>
-
-## ✔️ Requisitos Mínimos
-
-**1. Usuário**
-
-- Cadastro;
-- Login.
-
-**2. Bandas**
-
-- Criar banda;
-- Buscar bandas por nome.
-
-**3. Shows**
-
-- Criar show;
-- Buscar shows no dia.
-
-<br>
-
-## 🔗 Link da documentação do postman
-
-<br>
-
-https://documenter.getpostman.com/view/22901544/2s8Ysp2b4b
+- Ter uma cobertura de teste relativamente boa, a maior que você conseguir.
+- Criar um cache para consulta.
 
 <br>
 
@@ -166,7 +91,19 @@ Siga os passos e inclua as informações abaixo:
 | Instale as dependências   | `npm i`                   |
 | Adicionar as inf. no .env | `Dados do banco de dados` |
 
-E divirta-se :)
+Criar um arquivo .env com os seguintes dados sensíveis:
+
+- DB_HOST
+- DB_USER
+- DB_PASS
+- DB_SCHEMA
+- DB_PORT
+- JWT_KEY
+- ACCESS_TOKEN_EXPIRES_IN
+
+Banco de dados utilizado: **MySQL WorkBench**
+
+### e Divirta-se :)
 
 <br>
 
@@ -179,41 +116,29 @@ E divirta-se :)
 
 <br>
 
-## 🔃 Rotas BANDAS:
+## 🔃 Rotas PRODUCTS:
 
-| Método HTTP | Endpoint                | Descrição                              |
-| ----------- | ----------------------- | -------------------------------------- |
-| POST        | `/band/add`             | Cria/cadastra uma banda                |
-| GET         | `/band/details/:idBand` | Visualização de detalhes sobre a banda |
-
-<br>
-
-## 🔃 Rotas SHOWS:
-
-| Método HTTP | Endpoint               | Descrição                        |
-| ----------- | ---------------------- | -------------------------------- |
-| GET         | `/band/details/search` | Pegar todos os shows de uma data |
-| POST        | `band/added/:bandId`   | Adicionar um show a um dia       |
+| Método HTTP | Endpoint          | Descrição                |
+| ----------- | ----------------- | ------------------------ |
+| POST        | `/product/insert` | Cria/cadastra um produto |
+| GET         | `/product/:id`    | Buscar um produto por ID |
+| GET         | `/product/getAll` | Buscar todos os produtos |
 
 <br>
 
 ## ✨ O que funciona
 
-- Cadastrar
-- Login
-- Registrar banda
-- Visualização de detalhes sobre a banda
-- Adicionar um show a um dia
-- Pegar todos os shows de uma data
+- Signup do usuário;
+- Login do usuário;
+- Adcionar produto no catalogo --> apenas admin;
+- Pegar lista de todos os produto;
+- Pegar um produto especifico pelo ID;
 
 <br>
 
 ## ❌ O Que Não Funciona
 
-- Criar um ingresso
-- Comprar ingresso
-- Adicionar foto
-- Pegar todas as fotos
+- Filtrat os produtos por tags.
 
 <h1>
     <br>
@@ -226,8 +151,7 @@ _Caso queira contribuir com o projeto, será totalmente bem-vindx!!!_
 
 _Qualquer dúvida ou sugestão, chama no contatinho!_
 
-  <tr>  
-   <td align="center"><a href="https://github.com/dickfreitas"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/98359009?v=4" width="100px;" alt=""/><br /><sub><b>Dickson Freitas</b></sub></a><br /><a href="https://www.linkedin.com/in/dickson-sampaio-286205230/"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a> </td>    
+  <tr>     
    <td align="center"><a href="https://github.com/elisabetealves"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/elisabetealves" width="100px;" alt=""/><br /><sub><b>Elisabete Alves</b></sub></a><br /><a href="https://www.linkedin.com/in/elisabete-a-santos/"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a> </td> 
   </tr>
 
