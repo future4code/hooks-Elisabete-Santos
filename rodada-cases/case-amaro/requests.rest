@@ -1,0 +1,94 @@
+POST http://localhost:3003/user/signup 
+Content-Type: application/json
+
+{
+   "name": "Elisha", 
+   "email": "elisha@gmail.com", 
+   "password": "testeadm", 
+   "role": "admin"
+}
+
+###
+
+POST http://localhost:3003/user/login 
+Content-Type: application/json
+
+{
+   "email": "elisha@gmail.com", 
+   "password": "testeadm"
+}
+
+###
+GET http://localhost:3003/user/profile 
+Content-Type: application/json 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhZTZlOGU5LTgwZGEtNDZmMy1iM2YwLWZhMTBkMmRlZTgxYSIsInJvbGUiOiJhcXVpIHZhaSBlbnRyYXIgYSByb2xlIGV2ZW50dWFsbWVudGUiLCJpYXQiOjE2NjM1NjcyMjQsImV4cCI6MTY2MzU2NzUyNH0.f_Z5rdQsC2p9gVzqn17IVxU-hlAK5LAziCSLdscvIVk 
+
+### 
+GET http://localhost:3003/user/26f2fa40-db3f-4cb1-8a67-f372f293b9f6 
+Content-Type: application/json 
+Authorization: Token Gerado 
+
+### 
+POST http://localhost:3003/recipe 
+Content-Type: application/json 
+Authorization: Token Gerado
+
+{
+   "title": "Pudim de Leite", "description": "Pudin de leite condensado muito saboroso, venha aprender a fazer."
+}
+
+###
+GET http://localhost:3003/recipe/ec65e055-cb61-42f7-912d-c81488f7c287 
+Content-Type: application/json 
+Authorization: Token Gerado
+
+### 
+POST http://localhost:3003/user/follow 
+Content-Type: application/json 
+Authorization: Token Gerado
+
+{
+   "userToFollowId": "87c6db8e-b6b3-460c-8583-f3e3547bc129"
+}
+
+###
+POST http://localhost:3003/user/unfollow 
+Content-Type: application/json 
+Authorization: Token Gerado
+
+{
+   "userToUnfollowId": "cd399d21-b8c5-4577-8ae3-5fc5d70adfa9"
+}
+
+###
+GET http://localhost:3003/user/feed 
+Content-Type: application/json 
+Authorization: Token Gerado 
+
+###
+PUT http://localhost:3003/recipe/edit 
+Content-Type: application/json 
+Authorization: Token Gerado
+
+{
+"id": "b323a680-5f96-47d3-9e1c-441c9ea89f31", "title": "Pudim de Leite", "description": "Coloque na geladeira para esfriar mais rápido."
+}
+
+###
+DELETE http://localhost:3003/recipe/delete/2138c466-dbc3-4c9a-bf30-21f097b7bcf4 
+Content-Type: application/json 
+Authorization: Token Gerado
+
+###
+DELETE http://localhost:3003/user/delete/cd399d21-b8c5-4577-8ae3-5fc5d70adfa9 
+Content-Type: application/json 
+Authorization: Token Gerado 
+
+###
+PUT http://localhost:3003/user/login/resetPassword 
+Content-Type: application/json
+
+{
+   "email": "pedrosek@gmail.com"
+}
+
