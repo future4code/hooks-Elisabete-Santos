@@ -3,7 +3,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=ffffff&size=38&center=true&vCenter=true&width=500&lines=📽️+Case+Promobit+!!!;)](https://git.io/typing-svg)
 
 <center>
-   <img src="https://vov2.vov.vn/sites/default/files/2021-10/T%C3%A1c-ph%E1%BA%A9m-%C4%91i%E1%BB%87n-%E1%BA%A3nh-v%C3%A0-nhi%E1%BA%BFp-%E1%BA%A3nh-kh%C3%A1c-nhau-nh%C6%B0-th%E1%BA%BF-n%C3%A0o.jpg" width="100%" height="350" />
+   <img src="https://thumbs.gfycat.com/HospitableMerryJabiru-max-1mb.gif" width="100%" height="400" />
 
 </center
 
