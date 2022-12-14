@@ -1,8 +1,8 @@
 export const goToHomePage = (navigate) => {
-   navigate("/")
+  navigate("/")
 }
 
 export const goToMovieDetailPage = (navigate, id) => {
-   navigate(`/movie/${id}`)
-   window.scrollTo(0, 0)
+  navigate(`/movie/${id}`)
+  window.scrollTo(0, 0)
 }

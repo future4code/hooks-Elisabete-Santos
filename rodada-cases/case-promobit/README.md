@@ -18,7 +18,7 @@ O objetivo foi criar um aplicativo para mostar novas mensagens.
 
 - 🎯 Objetivo do Projeto
 - ⚙️ Requisitos
-- ✨ Funcionalidades
+- ✨ O que Funciona
 - ❌ O Que Não Funciona
 - 🔗 Link do Projeto no Surge
 - 💻 Como rodar o projeto
@@ -60,14 +60,17 @@ O objetivo foi criar um aplicativo para mostar novas mensagens.
 
 <h1>
     <br>
-    <p style="font-weight: bold;">✨ Funcionalidades</p>
+    <p style="font-weight: bold;">✨ O que Funciona</p>
 </h1>
 
-- Header dinâmico: Botões para transitar entre as páginas de batalha, pokédex, home e um botão de voltar de acordo com a página na qual ele está sendo renderizado;
-- Páginação: São renderizados ao todo 898 pokémon, sendo 21 por página;
-- Cards: Ao clicar na imagem do pokémon o usuário é redirecionado para a tela de detalhes do mesmo, além disso ele pode adicionar ou remover um pokémon da pokédex ao clicar na pokebola;
-- Pokédex: Renderiza todos os pokémon que foram capturados e permite que o usuário os remova da mesma, também permitindo acessar a página de detalhes do respectivo pokémon;
-- Página de Detalhes: Rederiza os detalhes do pokémon que o usuário clicou na home ou na pokédex, além disso ele consegue transitar entre os detalhes de todos os pokémon ao clicar nas setas de próximo e anterior.
+- Abre a página home ao clicar no TMDB
+- Filtros funcionam e mudam de cor
+- Paginação
+- Abre a página de detalhes do filme ao clicar no card de filmes
+- Scroll dos cards de elenco
+- Vídeo trailer do youtube
+- Abre a página de detalhes do filme ao clicar no card de filmes em recomendações
+- Responsivo para mobile
 
 <h1>
     <br>
@@ -180,3 +183,9 @@ _Qualquer dúvida ou sugestão, chama no contatinho!_
 <br>
 
 ### Feito com 💕 e muita dedicação
+
+### Imagens
+
+![Captura da Web_23-7-2022_142417_localhost](https://user-images.githubusercontent.com/88721328/180616100-d7c14dc6-2605-49f5-8fac-78c79d8bd016.jpeg)
+![Captura da Web_23-7-2022_142448_localhost](https://user-images.githubusercontent.com/88721328/180616104-fc5f783b-c1d6-4d13-9ea5-66998e84bfeb.jpeg)
+![Captura da Web_23-7-2022_142515_localhost](https://user-images.githubusercontent.com/88721328/180616107-4d55c402-8b8b-46ff-bc68-e1126da15992.jpeg)

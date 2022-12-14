@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components"
+import styled, {createGlobalStyle} from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -12,5 +12,6 @@ export const ContainerApp = styled.div`
   max-width: 100vw;
   min-height: 100vh;
   font-family: 'Roboto';
+
   background: #ececec;
 `
