@@ -1,16 +1,14 @@
-
+import React from "react"
+import Router from "./routes/Router"
+import { ContainerApp, GlobalStyle } from "./styled/GlobalStyle"
 
 function App() {
   return (
-    <div>
-      <header className="App-header">
-
-        <p>
-          PROMOBIT
-        </p>
-      </header>
-    </div>
-  );
+    <ContainerApp>
+      <GlobalStyle />
+      <Router />
+    </ContainerApp>
+  )
 }
 
-export default App;
+export default App
