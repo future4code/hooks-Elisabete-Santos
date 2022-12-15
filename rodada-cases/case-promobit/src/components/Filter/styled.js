@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const FilterContainer = styled.div `
+export const FilterContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,9 +9,14 @@ export const FilterContainer = styled.div `
   min-height: 300px;
   background-color: #28608d;
   color: white;
+
+  p{
+    font-size: 22px;
+    font-weight: bold;
+  }
 `
 
-export const Title = styled.h1 `
+export const Title = styled.h1`
   padding: 40px 0;
   width: 70%;
 
@@ -29,23 +34,19 @@ export const Title = styled.h1 `
   @media screen and (min-device-width : 300px) and (max-device-width : 500px) {
     width: 100%;
     padding: 40px 16px;
-
     font-size: 24px;
     line-height: 28px;
-
     text-align: left;
   }
 `
 
-export const ButtonsContainer = styled.div `
+export const ButtonsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
   padding-top: 16px;
   padding-bottom: 40px;
-
   max-width: 90%;
   gap: 12px;
 `

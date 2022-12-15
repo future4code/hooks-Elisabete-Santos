@@ -14,8 +14,8 @@ export const HeaderContainer = styled.div`
   }
 
   img {
-    margin-top: 8px;
-    width: 200px;
+    margin-top: 3px;
+    width: 180px;
   }
 
   @media screen and (min-device-width : 300px) and (max-device-width : 500px) {

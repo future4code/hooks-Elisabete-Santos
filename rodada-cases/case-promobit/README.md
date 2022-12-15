@@ -17,6 +17,7 @@
 O objetivo foi criar um aplicativo para mostar novas mensagens.
 
 - 🎯 Objetivo do Projeto
+- ✍️ Designer
 - ⚙️ Requisitos
 - ✨ O que Funciona
 - ❌ O Que Não Funciona
@@ -33,6 +34,17 @@ O objetivo foi criar um aplicativo para mostar novas mensagens.
 </h1>
    
 <p align="justify">A ideia é usar a Poke Api como fonte de dados para o projeto. Ela é uma API pública, bastante utilizada como fonte de dados para aplicações focadas em aprendizado de programação. Assim o objetivo é criar um site sobre Pokémon com o intuito de aplicar os conhcemintos adquiridos ao longo da décima primeira semana do bootcamp de desenvolvimento web fullstack da Labenu. O foco principal desse projeto foi aplicar os conhecimentos sobre: Estado Global, React Context, Providers e Consumers, Hook useContext, Organização dos dados e do componente de Estado Global. Consequentemente contribuiu para fixar conhcecimentos anteriores sobre o desenvolvimento com React.</p>
+
+<br>
+
+<h1>
+    <br>
+    <p style="font-weight: bold;">✍️ Designer</p>
+</h1>
+
+Siga o layout do figma sugerido: [clicando aqui](https://www.figma.com/file/rM7WPqhLY9ObnGzSCeWLxB/Teste-Front-End?node-id=0%3A1&t=hgH3PD26XRkY35aa-0)
+
+<br>
 
 <h1>
   <br>

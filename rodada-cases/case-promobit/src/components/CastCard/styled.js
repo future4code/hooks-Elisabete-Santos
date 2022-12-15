@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const CastCardContainer = styled.div `
+export const CastCardContainer = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -18,6 +18,6 @@ export const CastCardContainer = styled.div `
   }
 `
 
-export const Path = styled.img `
+export const Path = styled.img`
   border-radius: 4px;
 `

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const MovieDetailContainer = styled.div `
+export const MovieDetailContainer = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -8,7 +8,7 @@ export const MovieDetailContainer = styled.div `
   width: 100%;
   padding: 50px 10vw 50px 540px;
 
-  background-color: #2D0C5E;
+  background-color: #28608d;
   color: white;
 
   @media screen and (min-device-width : 300px) and (max-device-width : 500px) {
@@ -16,13 +16,13 @@ export const MovieDetailContainer = styled.div `
   }
 `
 
-export const TopContainer = styled.div `
+export const TopContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
 `
 
-export const OverviewContainer = styled.div `
+export const OverviewContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -45,7 +45,7 @@ export const OverviewContainer = styled.div `
   }
 `
 
-export const Title = styled.h1 `
+export const Title = styled.h1`
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -57,7 +57,7 @@ export const Title = styled.h1 `
   }
 `
 
-export const MoviePosterContainer = styled.div `
+export const MoviePosterContainer = styled.div`
   @media screen and (min-device-width : 300px) and (max-device-width : 500px) {
     display: flex;
     justify-content: center;
@@ -66,7 +66,42 @@ export const MoviePosterContainer = styled.div `
   }
 `
 
-export const MoviePoster = styled.img `
+export const Assessment = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.725rem;
+
+  p {
+    line-height: 22px;
+  }
+`
+
+export const CrewContainer = styled.div`
+  display: flex;
+  margin-top: 1.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 33px;
+`
+
+export const CrewContent = styled.div`
+  margin-left: 0rem;
+`
+
+export const CrewTitle = styled.h1`
+  font-size: 1rem;
+`
+
+export const CrewInfo = styled.p`
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+`
+
+
+export const MoviePoster = styled.img`
   position: absolute;
   top: 100px;
   left: 112px;
@@ -84,7 +119,7 @@ export const MoviePoster = styled.img `
   }
 `
 
-export const CastContainer = styled.div `
+export const CastContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -97,7 +132,7 @@ export const CastContainer = styled.div `
   }
 `
 
-export const CastMenu = styled.nav `
+export const CastMenu = styled.nav`
   display: flex;
   width: 95%;
   gap: 20px;
@@ -116,7 +151,7 @@ export const CastMenu = styled.nav `
   }
 `
 
-export const TrailerContainer = styled.div `
+export const TrailerContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -129,7 +164,7 @@ export const TrailerContainer = styled.div `
   }
 `
 
-export const Trailer = styled.iframe `
+export const Trailer = styled.iframe`
   width: 720px;
   height: 405px;
   border: none;
@@ -141,7 +176,7 @@ export const Trailer = styled.iframe `
   }
 `
 
-export const RecommendationsContainer = styled.div `
+export const RecommendationsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -155,7 +190,7 @@ export const RecommendationsContainer = styled.div `
   }
 `
 
-export const Recommendations = styled.div `
+export const Recommendations = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 60px;

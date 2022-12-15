@@ -1,5 +1,5 @@
 import React from 'react'
-import { ErrorPageContainer, ErrorImage } from './styled'
+import { ErrorPageContainer, ErrorImage, VoltarHome } from './styled'
 import errorPage from '../../assets/errorPage.png'
 import { Button } from "@material-ui/core"
 import { goToHomePage } from '../../routes/coordinator'
@@ -12,11 +12,11 @@ const ErrorPage = () => {
          <ErrorImage src={errorPage} />
          <Button
             sx={{
-               color: '#000000'
+               color: '#000000',
             }}
-            onClick={() => goToHomePage(navigate)}> Voltar
+            onClick={() => goToHomePage(navigate)}> <VoltarHome>Voltar para HOME</VoltarHome>
          </Button>
-      </ErrorPageContainer>
+      </ErrorPageContainer >
    )
 }
 

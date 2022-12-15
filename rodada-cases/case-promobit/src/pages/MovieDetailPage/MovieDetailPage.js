@@ -6,7 +6,10 @@ import Header from "../../components/Header/Header"
 import MovieCard from "../../components/MovieCard/MovieCard"
 import { api_key } from "../../constants/apiKey"
 import { goToMovieDetailPage } from "../../routes/coordinator"
-import { CastContainer, CastMenu, MovieDetailContainer, MoviePoster, MoviePosterContainer, OverviewContainer, Recommendations, RecommendationsContainer, Title, TopContainer, Trailer, TrailerContainer } from "./styled"
+import { CastContainer, CastMenu, MovieDetailContainer, MoviePoster, MoviePosterContainer, OverviewContainer, Recommendations, RecommendationsContainer, Title, TopContainer, Trailer, TrailerContainer, Assessment, CrewContainer, CrewContent, CrewTitle, CrewInfo } from "./styled"
+import { buildStyles, CircularProgressbar } from "react-circular-progressbar"
+import "react-circular-progressbar/dist/styles.css"
+import { format } from "date-fns";
 
 const MovieDetailPage = () => {
 
@@ -18,6 +21,8 @@ const MovieDetailPage = () => {
   const [movieCast, setMovieCast] = useState([])
   const [movieTrailerLink, setMovieTrailerLink] = useState("")
   const [recommendationList, setRecommendationList] = useState([])
+  const [releaseDate, setReleaseDate] = useState({})
+  const [crewInfo, setCrewInfo] = useState([])
 
   const pathParams = useParams()
 
@@ -33,6 +38,39 @@ const MovieDetailPage = () => {
     } catch (error) { console.log(error) }
   }
 
+  try {
+    axios
+      .get(`https://api.themoviedb.org/3/movie/${pathParams.id}/release_dates?${api_key}`)
+      .then((res) => {
+        const data = res.data.results;
+
+        for (let obj of data) {
+          if (obj.iso_3166_1 === "BR") {
+            setReleaseDate(obj);
+            break;
+          }
+        }
+      });
+  } catch (error) { console.log(error) }
+
+
+  try {
+    axios
+      .get(`https://api.themoviedb.org/3/movie/${pathParams.id}/credits?${api_key}&language=pt-BR`)
+      .then((res) => {
+        const data = res.data.crew;
+        let filteredData = [];
+
+        for (let obj of data) {
+          if (["Characters", "Director", "Writer"].includes(obj.job)) {
+            filteredData.push(obj);
+          }
+        }
+        setCrewInfo(filteredData);
+      });
+
+  } catch (error) { console.log(error) }
+
 
   const getCast = async () => {
     try {
@@ -45,7 +83,6 @@ const MovieDetailPage = () => {
           for (let i = 0; i < 10; i++) {
             cast.push(credits[i])
           }
-
           setMovieCast(cast)
         })
         .catch((err) => { console.log(err) })
@@ -120,7 +157,7 @@ const MovieDetailPage = () => {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Trailer> :
     <h2>Não foi possível carregar o trailer</h2>
 
-    
+
   const recommendation = (recommendationList.length > 0) ?
     recommendationList.map((movie) => {
       const poster = `https://image.tmdb.org/t/p/w200${movie.poster_path}`
@@ -136,6 +173,16 @@ const MovieDetailPage = () => {
       )
     }) : <h1>Nenhum filme encontrado</h1>
 
+  const {
+    vote_average,
+    release_date
+  } = movieDetails;
+
+  let percentage = (vote_average / 100) * 10;
+
+  const dateFormated = release_date
+    ? format(new Date(release_date), "dd-MM-yyyy")
+    : "";
 
   return (
     <div>
@@ -148,15 +195,50 @@ const MovieDetailPage = () => {
           <Title>
             {(movieYear.length > 0) ? `${movieDetails.title} (${movieYear.slice(0, 4)})` : "Carregando..."}
           </Title>
-          <p>{`${movieDetails.release_date}  •  ${movieGenres}  •  ${movieDetails.runtime} min`}</p>
-          <p>{`${movieDetails.vote_average * 10} %`} Avaliação dos usuários</p>
+
+          <p>{`${" "}
+            ${releaseDate && releaseDate.iso_3166_1
+              ? releaseDate.release_dates[0].certification
+              : ""}${" "}anos • ${dateFormated}  •  ${movieGenres}  •  ${movieDetails.runtime} min`}
+          </p>
+
+          <Assessment>
+            <div style={{ width: 65, fontSize: 19 }}>
+              <CircularProgressbar
+                value={percentage}
+                maxValue={1}
+                text={`${vote_average * 10}%`}
+                weight="bold"
+                strokeWidth={10}
+                styles={buildStyles({
+                  rotation: 0.5 + (1 - percentage / 100) / 2,
+                  pathColor: "#14FF00",
+                  textColor: "#14FF00",
+                  trailColor: "#FFFFFF",
+                  backgroundColor: "#14FF00",
+
+                })}
+              />
+            </div>
+            <p>Avaliação dos usuários</p>
+          </Assessment>
+
         </TopContainer>
         <OverviewContainer>
           <h3>Sinopse</h3>
           <p>{movieDetails.overview}</p>
+
+          <CrewContainer>
+            {crewInfo.map((crew) => (
+              <CrewContent key={crew.id}>
+                <CrewTitle>{crew.name}</CrewTitle>
+                <CrewInfo>{crew.job}</CrewInfo>
+              </CrewContent>
+            ))}
+          </CrewContainer>
+
         </OverviewContainer>
       </MovieDetailContainer>
-
 
       <CastContainer>
         <h2>Elenco original</h2>
@@ -176,7 +258,7 @@ const MovieDetailPage = () => {
           {recommendation}
         </Recommendations>
       </RecommendationsContainer>
-    </div>
+    </div >
   )
 }
 

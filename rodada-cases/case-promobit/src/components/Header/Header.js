@@ -8,9 +8,9 @@ const Header = () => {
 
   const navigate = useNavigate()
 
-  return(
+  return (
     <HeaderContainer>
-      <h2 onClick={() => goToHomePage(navigate)}><img src={logo} alt="logo com as letras T M D B" /></h2>
+      <h2 onClick={() => goToHomePage(navigate)}> <img src={logo} alt="logo com as letras T M D B" /></h2>
     </HeaderContainer>
   )
 }
