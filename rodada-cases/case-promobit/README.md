@@ -123,19 +123,29 @@ E divirta-se ;)
 <p align="center">
      <img src="./images/desk3.png"  width="400px">   
 </p>
+<p align="center">
+     <img src="./images/desk4.png"  width="400px">   
+</p>
 
 ## 📱 Mobile
 
 <p align="center">
      <img src="./images/mobile1.png">   
      <img src="./images/mobile2.png">
-     <img src="./images/mobile3.png"> 
 </p>
 
 <p align="center">
+     <img src="./images/mobile3.png"> 
      <img src="./images/mobile4.png">   
+</p>
+
+<p align="center">   
      <img src="./images/mobile5.png"> 
      <img src="./images/mobile6.png">  
+</p>
+
+<p align="center">
+     <img src="./images/mobile7.png">    
 </p>
 
 <br>
