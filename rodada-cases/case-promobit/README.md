@@ -3,7 +3,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=ffffff&size=38&center=true&vCenter=true&width=500&lines=📽️+Case+Promobit+!!!;)](https://git.io/typing-svg)
 
 <center>
-   <img src="https://thumbs.gfycat.com/HospitableMerryJabiru-max-1mb.gif" width="100%" height="400" />
+   <img src="https://thumbs.gfycat.com/PolishedFarflungAffenpinscher-max-1mb.gif" width="100%" height="400" />
 
 </center
 
@@ -121,15 +121,6 @@ Siga os passos e inclua as informações abaixo:
 <p align="center">
      <img src="./images/desk3.png"  width="400px">   
 </p>
-<p align="center">
-     <img src="./images/desk4.png"  width="400px">   
-</p>
-<p align="center">
-     <img src="./images/desk5.png"  width="400px">   
-</p>
-<p align="center">
-     <img src="./images/desk6.png"  width="400px">   
-</p>
 
 ## 📱 Mobile
 
@@ -195,3 +186,9 @@ _Qualquer dúvida ou sugestão, chama no contatinho!_
 <br>
 
 ### Feito com 💕 e muita dedicação
+
+<br>
+<h2>
+  <a href='#top'>🔝 Voltar para o topo.</a>
+</h2>
+<br>
