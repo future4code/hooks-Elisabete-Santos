@@ -3,7 +3,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=ffffff&size=38&center=true&vCenter=true&width=500&lines=📽️+Case+Promobit+!!!;)](https://git.io/typing-svg)
 
 <center>
-   <img src="https://thumbs.gfycat.com/PolishedFarflungAffenpinscher-max-1mb.gif" width="100%" height="400" />
+   <img src=" https://media.giphy.com/media/l4xywEDCtJUMu0QZa/giphy.gif" width="100%" height="400" />
 
 </center
 
