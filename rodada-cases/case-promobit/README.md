@@ -105,6 +105,8 @@ Siga os passos e inclua as informações abaixo:
 | Instale as dependências   | `npm i`            |
 | utilize o script de start | `npm start`        |
 
+E divirta-se ;)
+
 <h1>
     <br>
     <p style="font-weight: bold;">🎨 Layout</p>
