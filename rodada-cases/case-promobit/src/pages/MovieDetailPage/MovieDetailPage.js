@@ -226,7 +226,7 @@ const MovieDetailPage = () => {
         </TopContainer>
         <OverviewContainer>
           <h3>Sinopse</h3>
-          <p>{movieDetails.overview}</p>
+          <b>{movieDetails.overview}</b>
 
           <CrewContainer>
             {crewInfo.map((crew) => (

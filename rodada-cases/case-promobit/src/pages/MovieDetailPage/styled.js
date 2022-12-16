@@ -20,6 +20,14 @@ export const TopContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
 `
 
 export const OverviewContainer = styled.div`
@@ -36,11 +44,11 @@ export const OverviewContainer = styled.div`
     line-height: 24px;
   }
 
-  p{
+  b{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
   }
 `
@@ -91,13 +99,18 @@ export const CrewContent = styled.div`
 `
 
 export const CrewTitle = styled.h1`
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 18px;
+  
 `
 
 export const CrewInfo = styled.p`
   margin-top: 0.5rem;
   font-size: 0.875rem;
   font-weight: 400;
+  font-size: 18px;
 `
 
 
